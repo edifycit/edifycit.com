@@ -21,9 +21,18 @@ const CourseCard = ({courses}) => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1640,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -39,7 +48,7 @@ const CourseCard = ({courses}) => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

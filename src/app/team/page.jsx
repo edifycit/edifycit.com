@@ -7,13 +7,15 @@ const Team = () => {
   const [selectedCategory, setSelectedCategory] = useState("DT");
   const [selected, setSelected] = useState(1);
 
+  console.log(selected);
+
+  console.log(selectedCategory);
+
   const handleCategoryClick = (category, i) => {
-    if (selected === i) {
-      setSelected(false);
-    } else {
-      setSelected(i);
-    }
-    setSelectedCategory(category);
+    var subcategory = category;
+    var subIndex = i;
+    setSelected(subIndex);
+    setSelectedCategory(subcategory);
   };
 
   const data = [
@@ -24,6 +26,14 @@ const Team = () => {
       image: "/images/team/azeem.webp",
       category: "DT",
       className: "edify-team-head-background",
+    },
+
+      {
+      id: "4",
+      designation: "Director Education",
+      employe: "M. Usama Khalid",
+      image: "/images/team/usama.webp",
+      category: "DT",
     },
     {
       id: "2",
@@ -39,13 +49,7 @@ const Team = () => {
       image: "",
       category: "DT",
     },
-    {
-      id: "4",
-      designation: "Director Education",
-      employe: "M. Usama Khalid",
-      image: "/images/team/usama.webp",
-      category: "DT",
-    },
+  
 
     {
       id: "6",
@@ -139,7 +143,7 @@ const Team = () => {
     },
     {
       id: "19",
-      designation: "Bussiness Development Officer",
+      designation: "Admistrator",
       employe: "Aleena Safdar",
       image: "/images/team/aleena.webp",
       category: "BDO",
@@ -151,19 +155,13 @@ const Team = () => {
       image: "/images/team/hamna.webp",
       category: "MK",
     },
+
     {
       id: "21",
-      designation: "Social Media Marketer",
-      employe: "Hania Khan",
-      image: "",
-      category: "MK",
-    },
-    {
-      id: "22",
-      designation: "Graphic Designer",
+      designation: "Content Writer",
       employe: "Akifa waqar",
       image: "/images/team/akifa.webp",
-      category: "GP",
+      category: "MK",
     },
     {
       id: "24",
@@ -214,7 +212,7 @@ const Team = () => {
     },
     {
       id: "4",
-      buttonText: " Programming",
+      buttonText: "Development",
       value: "PD",
     },
     {
@@ -229,7 +227,7 @@ const Team = () => {
     },
     {
       id: "7",
-      buttonText: "Business Officer",
+      buttonText: "Management",
       value: "BDO",
     },
   ];
@@ -253,7 +251,6 @@ const Team = () => {
           <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>
         </div>
       </div>
-      {/* <hr /> */}
       <motion.section
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -294,7 +291,7 @@ const Team = () => {
                   className="h-full w-full costomeShadow object-cover z-50"
                   onError={({ currentTarget }) => {
                     currentTarget.onerror = null; // prevents looping
-                    currentTarget.src="/images/user.png";
+                    currentTarget.src = "/images/user.png";
                   }}
                   src={v.image}
                 />

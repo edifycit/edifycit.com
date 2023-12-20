@@ -31,7 +31,7 @@ const page = async () => {
         src="/images/pngwing.com.png"
         alt="background"
       />
-      <div id="main" className="md:my-24 my-10 relative">
+      <div id="main" className=" my-10 relative">
         <Hero />
         <Fcourse />
         <Coursehome courses={courses} />

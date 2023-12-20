@@ -6,7 +6,7 @@ const page = async () => {
     <>
       <div className="text-center max-w-xl mx-auto">
         <h1 className="text-6xl md:text-7xl capitalize font-bold mb-5 text-gray-200">
-          News & Updates
+          News & Events
         </h1>
         <div className="text-center mb-10">
           <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>

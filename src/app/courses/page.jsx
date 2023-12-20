@@ -1,4 +1,5 @@
 import CourseCards from "@/components/CourseCards";
+import Search from "./Search";
 
 
 
@@ -41,8 +42,7 @@ const buttons = [
   },
 ];
 
-const page = () => {
-
+const page = (props) => {
 
   return (
     <>
@@ -50,7 +50,7 @@ const page = () => {
         <div className="text-center max-w-xl mx-auto">
           <h1 className="text-6xl md:text-7xl capitalize font-bold mb-5 text-white">
           {/* bg-clip-text */}
-            Offerred Courses
+            Offered Courses
           </h1>
           <div className="text-center mb-10">
             <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>
@@ -60,6 +60,15 @@ const page = () => {
             <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>
           </div>
         </div>
+
+        <div className="flex justify-between items-center">
+          <div className="text-white bg-black py-2 px-3 border-white/20 border rounded-full" >
+          <i className="bx bx-filter mr-2"></i>
+          Filters
+          </div>
+          <Search value={props?.searchParams?.keyword} />
+        </div>
+
         {/* <div className="flex flex-col">
           <div className="flex snap-proximity snap-both md:justify-evenly overflow-auto md:flex-wrap py-6">
             {buttons.map((v, i) => (
@@ -78,7 +87,7 @@ const page = () => {
 
       {/* Coures Cards  ------*/}
       <section>
-        <CourseCards />
+        <CourseCards filters={props.searchParams} />
       </section>
     </>
   );
