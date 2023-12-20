@@ -115,7 +115,7 @@ const Apply = () => {
       />
 
       <form
-        className="w-full bg-[rgba(38,38,38,0.9)] border overflow-hidden border-white/10 shadow-black rounded-md shadow-lg relative"
+        className="w-full rounded-md  relative"
         onSubmit={submitHandler}
       >
         {/* Personal */}
@@ -126,10 +126,10 @@ const Apply = () => {
           src="/images/doddel.png"
           alt=""
         />
-        <fieldset className="mb-4">
-          <legend className="w-full p-4 bg-black  text-white border-gray-600 font-medium outline-none group">
+        <fieldset className="mb-6 bg-[rgba(38,38,38,0.51)] shadow-black shadow-sm">
+          <h2 className="w-full p-4 text-white bg-[#3B82F6] bg-opacity-40  font-medium outline-none group">
             Personal Information
-          </legend>
+          </h2>
           <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
             <div
               className={`relative col-span-1`}
@@ -139,18 +139,14 @@ const Apply = () => {
                 id="fullName"
                 value={formData.fullName}
                 name="fullName"
-                placeholder=""
+                placeholder="Full Name"
                 type="fullName"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+                autoComplete="off"
+                className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="fullName"
-              >
-                Full Name
-              </label>
-              <i className="bx bx-user absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
+           
+              <i className="bx bx-user absolute bottom-2 right-2 text-lg text-white/50 "></i>
             </div>
 
             <div
@@ -161,17 +157,12 @@ const Apply = () => {
                 id="email"
                 value={formData.email}
                 name="email"
-                placeholder=""
+                placeholder="Email"
                 type="email"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="email"
-              >
-                Email
-              </label>
+              
               <i className="bx bx-envelope absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
 
@@ -183,17 +174,12 @@ const Apply = () => {
                 id="phone"
                 value={formData.phone}
                 name="phone"
-                placeholder=""
+                placeholder="Contact Number"
                 type="tel"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="phone"
-              >
-                Phone
-              </label>
+              
               <i className="bx bx-phone absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
 
@@ -205,17 +191,12 @@ const Apply = () => {
                 id="address"
                 value={formData.address}
                 name="address"
-                placeholder=""
+                placeholder="Address"
                 type="text"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="address"
-              >
-                Address
-              </label>
+              
               <i className="bx bx-current-location absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
 
@@ -227,17 +208,12 @@ const Apply = () => {
                 id="city"
                 value={formData.city}
                 name="city"
-                placeholder=""
+                placeholder="City"
                 type="tel"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="city"
-              >
-                City
-              </label>
+              
               <i className="bx bxs-city absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
 
@@ -252,15 +228,9 @@ const Apply = () => {
                 placeholder=""
                 type="date"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="dob"
-              >
-                Date of Birth
-              </label>
-              {/* <i className="bx bx-calendar absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i> */}
+        
             </div>
 
             <div
@@ -268,13 +238,12 @@ const Apply = () => {
             >
               <select
                 required
-                style={{borderRadius:"5px !important"}}
                 id="course"
                 name="course"
-                placeholder=""
+                placeholder="Course"
                 value={formData.course}
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border-white/10 text-lg px-3 pb-3.5 pt-5 w-full border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+                className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               >
                 <option className="text-black" value="">
                   Select Course
@@ -287,13 +256,7 @@ const Apply = () => {
                   );
                 })}
               </select>
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="dob"
-              >
-                Course
-              </label>
-              <i className="bx bxs-chevron-down absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
+              
             </div>
 
             <div
@@ -302,12 +265,11 @@ const Apply = () => {
               <select
                 required
                 value={formData.gender}
-                style={{borderRadius:"5px !important"}}
                 id="gender"
                 name="gender"
                 placeholder=""
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               >
                 <option className="text-black" value="">
                   Select Gender
@@ -322,21 +284,15 @@ const Apply = () => {
                   Other
                 </option>
               </select>
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="gender"
-              >
-                Gender
-              </label>
-              <i className="bx bxs-chevron-down absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
+              
             </div>
           </div>
         </fieldset>
         {/* Qualification */}
-        <fieldset className="mb-4">
-          <legend className="w-full p-4 bg-black  text-white border-gray-600 font-medium outline-none group">
+        <fieldset className="mb-6 bg-[rgba(38,38,38,0.51)] shadow-black shadow-sm">
+          <h2 className="w-full p-4 text-white bg-[#3B82F6] bg-opacity-40  font-medium outline-none group ">
             Qualification
-          </legend>
+          </h2>
           <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
             <div
               className={`relative col-span-1`}
@@ -344,12 +300,11 @@ const Apply = () => {
               <select
                 required
                 value={formData.qualification}
-                style={{borderRadius:"5px !important"}}
                 id="qualification"
                 name="qualification"
-                placeholder=""
+                placeholder="Qualification"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               >
                 <option value="" disabled>
                   Select Qulification
@@ -384,14 +339,14 @@ const Apply = () => {
                 <option className="text-black" value="Master">
                   Master
                 </option>
+                <option className="text-black" value="PhD">
+                  PhD
+                </option>
+                <option className="text-black" value="other">
+                  other
+                </option>
               </select>
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="qualification"
-              >
-                Qualification
-              </label>
-              <i className="bx bxs-chevron-down absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
+              
             </div>
 
             <div
@@ -402,17 +357,12 @@ const Apply = () => {
                 id="completionYear"
                 value={formData.completionYear}
                 name="completionYear"
-                placeholder=""
+                placeholder="Year of Completion"
                 type="text"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="completionYear"
-              >
-                Completion Year
-              </label>
+              
               <i className="bx bx-hourglass absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
 
@@ -424,26 +374,23 @@ const Apply = () => {
                 id="institution"
                 value={formData.institution}
                 name="institution"
-                placeholder=""
+                placeholder="Institute"
                 type="tel"
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               />
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="institution"
-              >
-                Institute
-              </label>
+              
               <i className="bx bxs-city absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
             </div>
           </div>
         </fieldset>
+
+
         {/* More info */}
-        <fieldset className="">
-          <legend className="w-full p-4 bg-black  text-white border-gray-600 font-medium outline-none group">
+        <fieldset className="bg-[rgba(38,38,38,0.51)] shadow-black shadow-sm">
+          <h2 className="w-full p-4 bg-[#3B82F6] bg-opacity-40  text-white  font-medium outline-none group">
             More Info
-          </legend>
+          </h2>
           <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
             <div
               className={`relative col-span-1`}
@@ -451,12 +398,11 @@ const Apply = () => {
               <select
                 required
                 value={formData.source}
-                style={{borderRadius:"5px !important"}}
                 id="source"
                 name="source"
                 placeholder=""
                 onChange={inputChangeHandler}
-                className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+               className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
               >
                 <option className="text-black" value="" disabled>
                   Where did you here about us ?
@@ -477,13 +423,7 @@ const Apply = () => {
                   Through an Ambassador
                 </option>
               </select>
-              <label
-                className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                htmlFor="source"
-              >
-                Source
-              </label>
-              <i className="bx bxs-chevron-down absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
+              
             </div>
 
             {formData.source == "Ambassador" ? (
@@ -495,17 +435,12 @@ const Apply = () => {
                   value={formData.promoCode}
                   id="promoCode"
                   name="promoCode"
-                  placeholder=""
+                  placeholder="Ambassador Promo Code"
                   type="text"
                   onChange={inputChangeHandler}
-                  className={`block bg-transparent text-white border border-white/10 rounded-md text-lg px-3 pb-3.5 pt-5 w-full border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+                 className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
                 />
-                <label
-                  className="absolute rounded-sm bg-[rgba(38,38,38,0.9)] text-sm text-white  duration-300 transform -translate-y-5 scale-[0.90] top-2 z-10 origin-[0]  px-1 ml-1 peer-focus:text-gray-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-[0.90] peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-                  htmlFor="promoCode"
-                >
-                 Ambassador Promo Code
-                </label>
+               
                 <i className="bx bx-group absolute bottom-2 right-3 text-lg text-white/50 top-1/2 -translate-y-1/2"></i>
               </div>
             ) : null}

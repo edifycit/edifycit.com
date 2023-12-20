@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body suppressHydrationWarning={true}>
-        {/* <Particals /> */}
+        <Particals />
         <NavBar />
         <main className="max-w-[100vw] px-3 overflow-hidden">
           <section className="max-w-[1400px] m-auto mt-10">{children}</section>

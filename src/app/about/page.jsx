@@ -59,7 +59,7 @@ const About = () => {
       {/* Feture Section 1 */}
       <section
         id="feture"
-        className="grid lg:h-screen place-content-center mb-24"
+        className="grid  place-content-center mb-24"
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center">
@@ -111,7 +111,7 @@ const About = () => {
       {/* Feture Section 2 */}
       <section
         id="feture"
-        className="grid lg:h-screen  place-content-center mb-24"
+        className="grid  place-content-center mb-24"
       >
         <div className="container mx-auto px-4 ">
           <div className="flex flex-wrap max-md:flex-col-reverse items-center">
@@ -165,7 +165,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* Testimonies */}
       <Testimonies />
     </div>
   );

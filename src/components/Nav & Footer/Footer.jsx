@@ -29,9 +29,9 @@ const Footer = () => {
         style={{
           background: "linear-gradient(-155deg, #0000 0%, #101010 100%)",
         }}
-        className="relative border-t border-white/10  backdrop-blur-2xl mt-32 pt-8 pb-6 "
+        className="relative border-t border-white/10  backdrop-blur-2xl mt-16 pt-8 pb-6 "
       >
-        <div className="flex flex-col rounded-md items-center justify-center gap-10 px-6 py-4 m-auto mb-20 border shadow-2xl max-md:w-full w-max md:flex-row backdrop-blur-3xl border-slate-700/30">
+        <div className="flex flex-col rounded-md items-center justify-center gap-10 px-6 py-4 m-auto mb-20 border border-blue-500 border-opacity-50 shadow-2xl max-md:w-full w-max md:flex-row backdrop-blur-3xl border-slate-700/30">
           <h1 className="text-2xl font-medium text-gray-300">
             Subscribe to our Newsletter
           </h1>
@@ -39,7 +39,7 @@ const Footer = () => {
             <input
               type="text"
               placeholder="Enter Your Email"
-              className=" bg-transparent w-full focus:ring-0  md:w-[400px] px-5 py-3"
+              className=" bg-transparent w-full focus:ring-0  md:w-[400px] px-5 py-3 border-b border-[#ffffff45]"
             />
             <button className=" absolute top-1/2 -translate-y-[50%] px-3 py-2 rounded-sm right-1 text-white bg-blue-600">
               Subscribe
@@ -192,7 +192,7 @@ const Footer = () => {
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-300 py-1">
                 {/* © <span id="get-current-year">2022 to {year}</span> */}
-                © {year} Edifycit. All Rights Reserved.
+                © {year} Edify College of IT. All Rights Reserved.
               </div>
             </div>
           </div>

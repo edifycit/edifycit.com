@@ -47,6 +47,13 @@ body {
 select {
   border-radius: 0 !important;
 }
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
 
 /* Input Number scroll Remove --------------------------------------------------------  */
 input[type="number"]::-webkit-inner-spin-button,
@@ -187,9 +194,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid #fff2;
+
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px #242424 inset;
+
   transition: background-color 5000s ease-in-out 0s;
 }
 @font-face {

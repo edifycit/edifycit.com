@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonies = () => {
   return (
-    <section className="w-full  relative flex items-center justify-center py-10">
+    <section className="w-full  relative flex items-center justify-center py-4">
       {/* <svg
         viewBox="0 0 1280 1280"
         className="absolute w-[10%] bottom-[10%] -z-50 opacity-20 left-0 invert"

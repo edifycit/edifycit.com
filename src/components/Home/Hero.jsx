@@ -1,13 +1,25 @@
 "use client";
 import { useInView } from "framer-motion";
 import Partnership from "@/components/Burrh/Partnership";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 const Hero = () => {
   const ref = useRef(null);
   const ref1 = useRef(null);
   const isInView = useInView(ref, { once: false });
   const isInView2 = useInView(ref1, { once: false });
+
+
+  var [keyword, setKeyword] = useState("");
+  var router = useRouter();
+
+
+  const submitHandler = (e) =>{
+    e.preventDefault()
+    router.push(`/courses?keyword=${keyword}`);
+  }
 
   return (
     <>
@@ -79,12 +91,13 @@ const Hero = () => {
           </p>
           </div>
           <div className="flex md:space-x-5 max-md:flex-col">
-            <form className="md:w-[60%]">
+            <form onSubmit={submitHandler} className="md:w-[60%]">
               <div className="flex gap-y-4 flex-col md:flex-row ">
                 <input
                   className="h-12 focus:outline-none text-black max-md:rounded-md md:rounded-s-md right-0 w-full placeholder:text-[16px] pl-3"
                   placeholder="Course"
                   type="text"
+                  onChange={(e) => setKeyword(e.target.value)}
                   name="user_email"
                   id="user_email"
                   autoComplete="off"
