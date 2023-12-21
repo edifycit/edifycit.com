@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
    
 
         <main className="max-w-[100vw] px-3 overflow-hidden">
-             {/* <Popup/> */}
+             <Popup/>
           <section className="max-w-[1400px] m-auto mt-10">{children}</section>
         </main>
         <Footer />
