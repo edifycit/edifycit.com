@@ -32,8 +32,8 @@ const NavBar = () => {
                   priority
                   className="w-full h-full object-contain hidden lg:block"
                   width={700}
-                  height={120}
-                  src="/images/Edify.png"
+                  height={200}
+                  src="/images/logo1.webp"
                   alt="Edify College Of IT Logo"
                 />
                 <Image

@@ -2,8 +2,10 @@ import Footer from "@/components/Nav & Footer/Footer";
 import NavBar from "@/components/Nav & Footer/Navbar";
 import Particals from "@/components/Particals";
 import "./globals.css";
+import Popup from "@/components/Popup/Popup";
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <head>
@@ -32,7 +34,10 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Particals />
         <NavBar />
+   
+
         <main className="max-w-[100vw] px-3 overflow-hidden">
+             {/* <Popup/> */}
           <section className="max-w-[1400px] m-auto mt-10">{children}</section>
         </main>
         <Footer />
