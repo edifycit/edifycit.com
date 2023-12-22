@@ -6,7 +6,7 @@ import queryStr from 'query-string'
 
 
 const coursesfetch = async (filters) => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify(filters)}`);
+  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})} `);
   return data.message.data;
 };
 

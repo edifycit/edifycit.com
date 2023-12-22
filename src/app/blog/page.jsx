@@ -1,6 +1,8 @@
 import Blogscard from "@/components/BlogCards";
+import Pagination from "@/components/Pagination/Pagination";
 
-const page = () => {
+const page = ({searchParams}) => {
+
   return (
     <>
       <div className="text-center max-w-xl mx-auto">
@@ -15,7 +17,8 @@ const page = () => {
           <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>
         </div>
       </div>
-      <Blogscard />
+      <Blogscard filters={searchParams} />
+     
     </>
   );
 };

@@ -8,7 +8,7 @@ const Popup = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowBanner(true);
-    }, 5000);
+    }, 2000);
   }, []);
 
   useEffect(() => {
@@ -34,8 +34,8 @@ const Popup = () => {
           onClick={() => setShowBanner(false)}
         >
           <img src="./images/forweb.jpg" alt="" />
-          <Link className=" absolute bottom-4  right-[20px] " href="https://docs.google.com/forms/d/1jy3CheLQmM6qZ9BdjytVydRfoB-CHjluryO_EnpTr7E/edit" target="_blank">
-            <button class=" px-[40px] border  border-white py-[10px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#5D9EF1] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+          <Link className="w-full  " href="https://docs.google.com/forms/d/1jy3CheLQmM6qZ9BdjytVydRfoB-CHjluryO_EnpTr7E/edit" target="_blank">
+            <button className=" px-[40px]  w-full   py-[10px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden   scale-105 shadow-lg before:absolute before:top-0  before:w-full before:h-full before:bg-gradient-to-r before:from-[#5D9EF1] before:to-[#4338CA]   before:z-[-1] before:rounded-xl before:left-0 text-[#fff] animate-pulse ">
              Register Yourself
             </button>
           </Link>

@@ -180,7 +180,7 @@ const Team = () => {
     {
       id: "26",
       designation: "App Developer",
-      employe: "Muhammad Suffain",
+      employe: "Muhammad Suffian",
       image: "",
       category: "PD",
     },
