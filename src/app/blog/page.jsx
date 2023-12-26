@@ -1,6 +1,18 @@
 import Blogscard from "@/components/BlogCards";
 import Pagination from "@/components/Pagination/Pagination";
+import { openGraphImage } from "@/components/shared-metadata";
 
+export const metadata = {
+  title: "Blogs | Edify College of IT",
+  description:
+    "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
+  openGraph: {
+    ...openGraphImage,
+    title: "Blogs | Edify College of IT",
+    description:
+      "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
+  },
+};
 const page = ({searchParams}) => {
 
   return (

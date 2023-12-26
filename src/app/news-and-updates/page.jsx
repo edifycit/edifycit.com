@@ -1,6 +1,18 @@
 import Components from "@/components/Components";
 import { Suspense } from "react";
+import { openGraphImage } from "@/components/shared-metadata";
 
+export const metadata = {
+  title: "News and Events| Edify College of IT",
+  description:
+    "Stay informed with Edifycit's latest news and events. Celebrate milestones and connect with the digital community.",
+  openGraph: {
+    ...openGraphImage,
+    title: "News and Events| Edify College of IT",
+    description:
+      "Stay informed with Edifycit's latest news and events. Celebrate milestones and connect with the digital community.",
+  },
+};
 const page = async () => {
   return (
     <>

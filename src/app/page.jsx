@@ -8,20 +8,31 @@ import {
 } from "@/components/Home/Export";
 import axios from "axios";
 import Image from "next/image";
-
+import { openGraphImage } from "@/components/shared-metadata";
 const coursesfetch = async () => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?limit=6`);
+  const { data } = await axios.get(
+    `https://admin.edifycit.com/api/courses?limit=6`
+  );
   return data.message.data;
 };
 
-const page = async () => {
+export const metadata = {
+  title: "Edify College of IT | No. 1 Leading Institute In Pakistan",
+  description:
+    "Edify College of IT: Your Digital Success Gateway. Learn marketing, design, development, animation, and more. Secure your future today - Enroll now.",
+  openGraph: {
+    ...openGraphImage,
+    title: "Edify College of IT | No. 1 Leading Institute In Pakistan",
+    description:
+      "Edify College of IT: Your Gateway to Digital Success. Master digital marketing, design, development, animation, and more. Secure your future today. Enroll now.",
+  },
+};
 
+const page = async () => {
   const courses = await coursesfetch();
- 
+
   return (
     <>
-
-
       <Image
         width={700}
         height={700}
