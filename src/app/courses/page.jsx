@@ -1,7 +1,19 @@
 import CourseCards from "@/components/CourseCards";
 import Search from "./Search";
 
+import { openGraphImage } from "@/components/shared-metadata";
 
+export const metadata = {
+  title: "Courses | Edify College of IT",
+  description:
+    "Unleash your potential with Edifycit's expert courses. Dive into the digital world and shape your success. Enroll now to kick-start your journey.",
+  openGraph: {
+    ...openGraphImage,
+    title: "Courses | Edify College of IT",
+    description:
+      "Unleash your potential with Edifycit's expert courses. Dive into the digital world and shape your success. Enroll now to kick-start your journey.",
+  },
+};
 
 
 const buttons = [

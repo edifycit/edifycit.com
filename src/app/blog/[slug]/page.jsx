@@ -2,8 +2,26 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Blogs | Edify College of IT",
+  description:
+    "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
+  openGraph: {
+ 
+    title: "Blogs | Edify College of IT",
+    description:
+      "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
+      images:['https://edifycit.com/_next/image?url=%2Fimages%2Flogo1.webp&w=750&q=75']
+  },
+};
 const getSingleBlog = async (slug) => {
   const { data } = await axios.get(`https://admin.edifycit.com/api/blogs/single/${slug}`);
+  
+  metadata.title = data.message.metaTitle
+  metadata.description = data.message.metaDesc
+  metadata.openGraph.title = data.message.metaTitle
+  metadata.openGraph.description = data.message.metaDesc
+  metadata.openGraph.images = data.message.featuredImage.url
   return data.message;
 };
 

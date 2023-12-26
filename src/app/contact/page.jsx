@@ -1,6 +1,18 @@
 import Link from "next/link";
 import React from "react";
+import { openGraphImage } from "@/components/shared-metadata";
 
+export const metadata = {
+  title: "Contact Us | Edify College of IT",
+  description:
+    "Questions or ready to enroll? Contact Edify College of IT for swift answers and easy enrollment steps. Your digital journey begins here",
+  openGraph: {
+    ...openGraphImage,
+    title: "Contact Us | Edify College of IT",
+    description:
+      "Questions or ready to enroll? Contact Edify College of IT for swift answers and easy enrollment steps. Your digital journey begins here",
+  },
+};
 const page = () => {
   const social = [
     {
