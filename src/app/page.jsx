@@ -7,10 +7,6 @@ import {
   Reviews,
 } from "@/components/Home/Export";
 import axios from "axios";
-
-
-
-
 import Image from "next/image";
 
 const coursesfetch = async () => {
@@ -21,9 +17,11 @@ const coursesfetch = async () => {
 const page = async () => {
 
   const courses = await coursesfetch();
-
+ 
   return (
     <>
+
+
       <Image
         width={700}
         height={700}
