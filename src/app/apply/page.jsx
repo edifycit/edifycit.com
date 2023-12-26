@@ -248,7 +248,6 @@ const Apply = () => {
                 <option className="text-black" value="">
                   Select Course
                 </option>
-                <option className="text-black" value="65570a9665bbeb84b1be32b5">December Gala 2023 </option>
                 {courseName.map((v, i) => {
                   return (
                     <option className="text-black" key={i} value={v._id}>
