@@ -13,7 +13,7 @@ const Membership = () => {
       <div className="relative">
         <div className="flex max-md:gap-4">
           {/* side line */}
-          <div className="w-[8.3%] flex flex-col items-center" ref={ref}>
+          <div className="ml-2 mr-10 flex flex-col items-center" ref={ref}>
             <div
               style={{
                 opacity: isInView ? "1" : "0",
@@ -75,6 +75,7 @@ const Membership = () => {
         </div>
       </div>
       <div
+       className=" ml-4"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-100px)",

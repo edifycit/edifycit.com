@@ -12,7 +12,7 @@ const Fcourse = () => {
     <>
       <div className="flex max-md:gap-4 relative">
         {/* side line */}
-        <div className="w-[8.3%]   flex flex-col items-center" ref={ref}>
+        <div className="ml-2 mr-10 flex flex-col items-center" ref={ref}>
           <div>
             <div
               style={{
@@ -75,7 +75,7 @@ const Fcourse = () => {
       </div>
 
       <div
-        className="md:max-w-6xl"
+        className="md:max-w-6xl ml-4"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-100px)",

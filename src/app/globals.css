@@ -9,11 +9,10 @@
   src: url("../../public/fonts/Mona-Sans-SemiBold.otf");
 }
 
-html,body{
+html,
+body {
   scroll-behavior: smooth;
 }
-
-
 
 @layer utilities {
   .custom-box-shadow {
@@ -145,46 +144,41 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* glow ------------------------------------------------------------------------- */
-.glow{
+.glow {
   box-shadow: 0 0 50px 5px #b9ccd6;
 }
-.glow2{
+.glow2 {
   box-shadow: 0 0 30px 15px #3a34ad9c;
 }
 
-.glow3{
+.glow3 {
   box-shadow: 0 0 30px 15px #ff9500a1;
 }
 
-.glow4{
+.glow4 {
   box-shadow: 0 0 30px 15px #f871719c;
 }
 
-
-
 /* courses slug page css */
 
-
-
-.courseIntro h2{
-  @apply text-2xl font-bold mb-1 mt-8
+.courseIntro h2 {
+  @apply text-2xl font-bold mb-1 mt-8;
 }
 
-.courseIntro h3{
-  @apply text-xl font-semibold mb-1 mt-2
+.courseIntro h3 {
+  @apply text-xl font-semibold mb-1 mt-2;
 }
 
-.courseIntro p{
+.courseIntro p {
   @apply text-[1.1rem] text-gray-300 font-normal leading-[1.8rem] tracking-[-.01rem] mt-2 mb-4;
 }
 
-
-.courseIntro img{
+.courseIntro img {
   @apply w-full rounded-md h-auto;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -192,7 +186,6 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-
   -webkit-text-fill-color: white;
 
   transition: background-color 5000s ease-in-out 0s;
@@ -208,11 +201,9 @@ select:-webkit-autofill:focus {
   -moz-user-select: none;
   user-select: none;
 }
-.myDivToPrint h2{
+.myDivToPrint h2 {
   font-family: viking !important;
-
 }
-
 
 .popupModal {
   position: fixed;
@@ -247,7 +238,6 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   height: auto;
   overflow: hidden;
- 
 
   opacity: 0;
 }
@@ -256,7 +246,6 @@ select:-webkit-autofill:focus {
   height: 100%;
   object-fit: cover;
   border-radius: 0.25rem;
-  
 }
 
 .popUpBanner.show {
@@ -264,7 +253,7 @@ select:-webkit-autofill:focus {
   opacity: 1;
 }
 
-.poppubbox{
+.poppubbox {
   position: absolute;
   color: white;
   right: 10px;

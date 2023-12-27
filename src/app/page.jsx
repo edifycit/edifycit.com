@@ -17,6 +17,13 @@ const coursesfetch = async () => {
   return data.message.data;
 };
 
+<<<<<<< HEAD
+const page = async () => {
+  const courses = await coursesfetch();
+
+  return (
+    <>
+=======
 export const metadata = {
   title: "Edify College of IT | No. 1 Leading Institute In Pakistan",
   description:
@@ -62,6 +69,7 @@ const page = async () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
         />
+>>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
       <Image
         width={700}
         height={700}
