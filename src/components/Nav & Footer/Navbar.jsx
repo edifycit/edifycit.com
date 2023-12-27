@@ -80,9 +80,10 @@ const NavBar = () => {
               >
                 <div className="grid grid-cols-1 items-center gap-3 relative cursor-pointer">
                   <span
-                    className="w-6 border bg-gray-300 absolute mt-0 top-1 transition-all duration-300 ease-in-out"
+                    className="w-6 border bg-gray-300 absolute mt-0 transition-all duration-300 ease-in-out"
                     style={{
                       rotate: `${mobNavPosstion === false ? 0 : 40}deg`,
+                      top: `${mobNavPosstion === false ? 3 : 10}px`,
                     }}
                   ></span>
                   <span

@@ -15,15 +15,15 @@ const About = () => {
   return (
     <div>
       {/* hero section */}
-      <section className="max-md:py-8  h-[100vh]">
+      <section className="max-md:py-8 md:h-[100vh] lg:h-[100vh]">
         <div className="text-white relative">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-col lg:flex-row items-center">
             <div className="flex flex-col w-full lg:w-1/3 justify-center items-center md:items-start p-8">
               <h1 className="text-6xl md:text-7xl capitalize font-bold mb-5 text-gray-200 first-letter:text-blue-500">
                 About Us
               </h1>
             </div>
-            <div className="md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
+            <div className="md:mb-0 md:mt-0 ml-0 md:px-4 lg:w-2/3  justify-center">
               <div className="grid grid-cols-23 grid-rows-8 gap-4 h-full ">
                 {img.map((v, i) => (
                   <div

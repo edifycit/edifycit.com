@@ -22,7 +22,6 @@ const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
 
-
   return (
     <>
       <footer
@@ -46,11 +45,8 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="container mx-auto px-4">
+        <div className=" max-w-[1350px] m-auto lg:px-0 px-4">
           <div className="grid grid-cols-4 gap-4">
-
-
-
             <div className="col-span-4 lg:col-span-2">
               <h4 className="text-3xl fonat-semibold text-blueGray-700">
                 Let&apos;s keep in touch!
@@ -61,7 +57,7 @@ const Footer = () => {
               <div className="mt-6 lg:mb-0 mb-6 flex gap-4">
                 {social.map((v, i) => (
                   <Link
-                  key={i}
+                    key={i}
                     id={i}
                     href={v.h}
                     className="text-xl items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 contents"
@@ -77,7 +73,7 @@ const Footer = () => {
                 Useful Links
               </span>
               <ul className="list-unstyled">
-              <li>
+                <li>
                   <Link
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/blog"
@@ -85,7 +81,7 @@ const Footer = () => {
                     Blog
                   </Link>
                 </li>
-                
+
                 <li>
                   <Link
                     className="block pb-2 text-gray-300 hover:text-white"
@@ -110,8 +106,7 @@ const Footer = () => {
                     About Us
                   </Link>
                 </li>
-            
-                
+
                 <li>
                   <Link
                     className="block pb-2 text-gray-300 hover:text-white"
@@ -125,14 +120,14 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/become-an-ambassador"
                   >
-          Become An Ambassador
+                    Become An Ambassador
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="col-span-4 lg:col-span-1">
               <span className="block uppercase text-blueGray-500 text-xl font-semibold mb-2">
-              Our Courses
+                Our Courses
               </span>
               <ul className="list-unstyled">
                 <li>
@@ -140,7 +135,7 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                  SEO
+                    SEO
                   </Link>
                 </li>
                 <li>
@@ -148,7 +143,7 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                Amazon
+                    Amazon
                   </Link>
                 </li>
                 <li>
@@ -156,7 +151,7 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                Spoken English
+                    Spoken English
                   </Link>
                 </li>
                 <li>
@@ -164,7 +159,7 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                  Digital Marketing
+                    Digital Marketing
                   </Link>
                 </li>
                 <li>
@@ -172,7 +167,7 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                Web Development
+                    Web Development
                   </Link>
                 </li>
                 <li>
@@ -180,19 +175,18 @@ const Footer = () => {
                     className="block pb-2 text-gray-300 hover:text-white"
                     href="/courses"
                   >
-                Android Development 
+                    Android Development
                   </Link>
                 </li>
               </ul>
             </div>
-              
           </div>
           <hr className="my-6 border-white/10" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-300 py-1">
-                {/* © <span id="get-current-year">2022 to {year}</span> */}
-                © {year} Edify College of IT. All Rights Reserved.
+                {/* © <span id="get-current-year">2022 to {year}</span> */}©{" "}
+                {year} Edify College of IT. All Rights Reserved.
               </div>
             </div>
           </div>

@@ -10,18 +10,17 @@ import axios from "axios";
 import Image from "next/image";
 
 const coursesfetch = async () => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?limit=6`);
+  const { data } = await axios.get(
+    `https://admin.edifycit.com/api/courses?limit=6`
+  );
   return data.message.data;
 };
 
 const page = async () => {
-
   const courses = await coursesfetch();
- 
+
   return (
     <>
-
-
       <Image
         width={700}
         height={700}
