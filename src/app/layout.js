@@ -1,14 +1,23 @@
+'use client'
 import Footer from "@/components/Nav & Footer/Footer";
 import NavBar from "@/components/Nav & Footer/Navbar";
 import Particals from "@/components/Particals";
 import "./globals.css";
 import Popup from "@/components/Popup/Popup";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
-  
+
+  var pathname = usePathname()
+
+  var domain = process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://edifycit.com"
+
   return (
     <html lang="en">
       <head>
+
+        <link rel="canonical" href={`${domain}${pathname}`} />
+
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"

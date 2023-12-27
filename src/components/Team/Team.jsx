@@ -296,9 +296,9 @@ const Team = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center border-b border-[color:var(--accent-color)] pb-4">
-                <h1 className="text-xl text-center font-semibold text-gray-300 leading-8 tracking-wide">
+                <h3 className="text-xl text-center font-semibold text-gray-300 leading-8 tracking-wide">
                   {v.employe}
-                </h1>
+                </h3>
                 <span className="text-sm text-gray-400">{v.designation}</span>
               </div>
             </motion.div>

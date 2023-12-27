@@ -56,7 +56,7 @@ const Partnership = () => {
       <div className="backdrop-blur-sm py-8 px-4">
         <div className="p-4 flex flex-col md:flex-row gap-12 md:gap-6 items-center">
           <div>
-            <h1 className="text-xl font-semibold opacity-50">Partnerships</h1>
+            <h2 className="text-xl font-semibold opacity-50">Partnerships</h2>
           </div>
           <Slider {...settings} className="w-[100%] max-w-5xl">
             {noOfPartners.map((v, i) => {

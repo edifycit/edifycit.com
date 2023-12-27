@@ -15,27 +15,27 @@ const CountBanner = () => {
         <div>
           <div className="flex justify-evenly flex-col md:flex-row gap-10 items-center">
             <div>
-              <h3 className="text-2xl text-center">
+              <div className="text-2xl text-center">
                 <CountUp end={5} enableScrollSpy /> +
-              </h3>
+              </div>
               <p className="text-slate-400 text-center">Branches</p>
             </div>
             <div>
-              <h3 className="text-2xl text-center">
+              <div className="text-2xl text-center">
                 <CountUp end={30} enableScrollSpy /> +
-              </h3>
+              </div>
               <p className="text-slate-400 text-center">IT Courses</p>
             </div>
             <div>
-              <h3 className="text-2xl text-center">
+              <div className="text-2xl text-center">
                 <CountUp end={200} enableScrollSpy /> +
-              </h3>
+              </div>
               <p className="text-slate-400 text-center">Institutions</p>
             </div>
             <div>
-              <h3 className="text-2xl text-center">
+              <div className="text-2xl text-center">
                 <CountUp end={5078} enableScrollSpy /> +
-              </h3>
+              </div>
               <p className="text-slate-400 text-center">Students</p>
             </div>
           </div>
