@@ -10,6 +10,7 @@ const Reviews = () => {
 
   return (
     <>
+<<<<<<< HEAD
       {/* <div className="relative">
         <div className="flex max-md:gap-4">
           <div className="ml-2 mr-10 flex flex-col items-center" ref={ref}>
@@ -78,6 +79,9 @@ const Reviews = () => {
           />
         </div>
       </div> */}
+=======
+     
+>>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
       <div
         ref={ref}
         style={{

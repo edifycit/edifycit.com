@@ -1,6 +1,18 @@
 import React from "react";
 
+import { openGraphImage } from "@/components/shared-metadata";
 
+export const metadata = {
+  title: "Success Stories | Edify College of IT",
+  description:
+    "Explore the stories of our successful students at Edify College of IT. Be inspired to envision your own success. Join us, and let's create your story together.",
+  openGraph: {
+    ...openGraphImage,
+    title: "Success Stories | Edify College of IT",
+    description:
+      "Explore the stories of our successful students at Edify College of IT. Be inspired to envision your own success. Join us, and let's create your story together.",
+  },
+};
 
 const page = async () => {
   const getStories = [

@@ -2,12 +2,38 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
+
+
+
+
 const getSingleBlog = async (slug) => {
+<<<<<<< HEAD
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/blogs/single/${slug}`
   );
+=======
+  const { data } = await axios.get(`https://admin.edifycit.com/api/blogs/single/${slug}`);
+  
+
+>>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
   return data.message;
 };
+export async function generateMetadata({ params}) {
+const metaslug =  await getSingleBlog(params.slug)
+
+ 
+  return {
+    title: metaslug.title,
+    description:metaslug.metaDesc,
+    openGraph: {
+      title: metaslug.title,
+      description:metaslug.metaDesc,
+      images: [metaslug.featuredImage.url],
+    },
+  }
+}
+ 
+
 
 const getRecentBlogs = async () => {
   const { data } = await axios.get(
@@ -39,9 +65,9 @@ const page = async ({ params }) => {
           />
           <div className="absolute bottom-0 z-10 px-4 py-6  md:w-1/2 bg-[#18171761] text-white rounded-tr-sm backdrop-blur-lg">
             <div className="relative">
-              <h2 className="pl-2 font-extrabold border-l-8 border-transparent md:text-2xl">
+              <h1 className="pl-2 font-extrabold border-l-8 border-transparent md:text-2xl">
                 {blog?.title}
-              </h2>
+              </h1>
               <span className="absolute top-0 right-0 h-full bg-white animate-show backdrop-blur-lg"></span>
               <span className="absolute top-0 left-0 w-2 h-full bg-white animate-blink backdrop-blur-lg"></span>
             </div>

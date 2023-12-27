@@ -2,19 +2,45 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
+
+
+
+
 const singleCourse = async (slug) => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses/single/${slug}`
   );
+
+
+
   return data.message;
 };
-
+export async function generateMetadata({ params}) {
+  const metaslug =  await singleCourse(params.slug)
+  
+   
+    return {
+      title: metaslug.title,
+      description:metaslug.metaDesc,
+      openGraph: {
+        title: metaslug.title,
+        description:metaslug.metaDesc,
+        images: [metaslug.featuredImage.url],
+      },
+    }
+  }
 const fetchRelatedCourses = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
   );
   return data.message.data;
 };
+
+
+
+
+
+
 
 const page = async ({ params }) => {
   const relatedCourses = await fetchRelatedCourses();
@@ -33,9 +59,9 @@ const page = async ({ params }) => {
             <p className="inline-block mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase rounded-full bg-teal-accent-400">
               {course?.category}
             </p>
-            <h2 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
+            <h1 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
               {course?.title}
-            </h2>
+            </h1>
             <p className="text-base mb-6 text-gray-500 md:text-lg">
               {course?.metaDesc}
             </p>
@@ -150,6 +176,11 @@ const page = async ({ params }) => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+      
+>>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
     </>
   );
 };

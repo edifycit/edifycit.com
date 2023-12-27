@@ -1,8 +1,8 @@
-import About from '@/components/About/About'
-import React from 'react'
-import { openGraphImage } from "@/components/shared-metadata";
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import Testimonies from "@/components/Burrh/Testimonies";
 
-<<<<<<< HEAD
 const About = () => {
   const img = [
     "/images/about/work1.webp",
@@ -15,15 +15,15 @@ const About = () => {
   return (
     <div>
       {/* hero section */}
-      <section className="max-md:py-8 md:h-[100vh] lg:h-[100vh]">
+      <section className="max-md:py-8  h-[100vh]">
         <div className="text-white relative">
-          <div className="flex flex-col md:flex-col lg:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center">
             <div className="flex flex-col w-full lg:w-1/3 justify-center items-center md:items-start p-8">
               <h1 className="text-6xl md:text-7xl capitalize font-bold mb-5 text-gray-200 first-letter:text-blue-500">
                 About Us
               </h1>
             </div>
-            <div className="md:mb-0 md:mt-0 ml-0 md:px-4 lg:w-2/3  justify-center">
+            <div className="md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
               <div className="grid grid-cols-23 grid-rows-8 gap-4 h-full ">
                 {img.map((v, i) => (
                   <div
@@ -168,25 +168,6 @@ const About = () => {
       <Testimonies />
     </div>
   );
-=======
-export const metadata = {
-  title: "About Us | Edify College of IT ",
-  description:
-    "Explore the story behind Edify College of IT. Learn about our commitment to shaping digital futures. Discover our mission and vision. Join us on this exciting journey.",
-  openGraph: {
-    ...openGraphImage,
-    title: "About Us | Edify College of IT ",
-    description:
-      "Explore the story behind Edify College of IT. Learn about our commitment to shaping digital futures. Discover our mission and vision. Join us on this exciting journey.",
-  },
->>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
 };
-const page = () => {
-  return (
-<>
-<About/>
-</>
-  )
-}
 
-export default page
+export default About;
