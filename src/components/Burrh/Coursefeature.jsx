@@ -94,9 +94,9 @@ const Coursefeature = () => {
                     src={`/images/courseCategories/${v.cate}.png`}
                   />
                   <div className="p-4 flex flex-col items-center">
-                    <h1 className="font-semibold text-lg text-slate-200 mb-1 whitespace-nowrap">
+                    <h3 className="font-semibold text-lg text-slate-200 mb-1 whitespace-nowrap">
                       {v.cate}
-                    </h1>
+                    </h3>
                     <span className="text-gray-400">
                       {v.noOfCourses} courses
                     </span>

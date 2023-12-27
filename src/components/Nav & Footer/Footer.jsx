@@ -32,9 +32,9 @@ const Footer = () => {
         className="relative border-t border-white/10  backdrop-blur-2xl mt-16 pt-8 pb-6 "
       >
         <div className="flex flex-col rounded-md items-center justify-center gap-10 px-6 py-4 m-auto mb-20 border border-blue-500 border-opacity-50 shadow-2xl max-md:w-full w-max md:flex-row backdrop-blur-3xl border-slate-700/30">
-          <h1 className="text-2xl font-medium text-gray-300">
+          <h4 className="text-2xl font-medium text-gray-300">
             Subscribe to our Newsletter
-          </h1>
+          </h4>
           <div className="relative max-md:w-full">
             <input
               type="text"

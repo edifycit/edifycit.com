@@ -2,18 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Courses | Edify College of IT",
-  description:
-    "Unleash your potential with Edifycit's expert courses. Dive into the digital world and shape your success. Enroll now to kick-start your journey.",
-  openGraph: {
- 
-    title: "Courses | Edify College of IT",
-    description:
-      "Unleash your potential with Edifycit's expert courses. Dive into the digital world and shape your success. Enroll now to kick-start your journey.",
-      images:['https://edifycit.com/_next/image?url=%2Fimages%2Flogo1.webp&w=750&q=75']
-  },
-};
+
 
 
 
@@ -22,15 +11,24 @@ const singleCourse = async (slug) => {
     `https://admin.edifycit.com/api/courses/single/${slug}`
   );
 
-  metadata.title = data.message.metaTitle
-  metadata.description = data.message.metaDesc
-  metadata.openGraph.title = data.message.metaTitle
-  metadata.openGraph.description = data.message.metaDesc
-  metadata.openGraph.images = data.message.featuredImage.url
+
 
   return data.message;
 };
-
+export async function generateMetadata({ params}) {
+  const metaslug =  await singleCourse(params.slug)
+  
+   
+    return {
+      title: metaslug.title,
+      description:metaslug.metaDesc,
+      openGraph: {
+        title: metaslug.title,
+        description:metaslug.metaDesc,
+        images: [metaslug.featuredImage.url],
+      },
+    }
+  }
 const fetchRelatedCourses = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
@@ -61,9 +59,9 @@ const page = async ({ params }) => {
             <p className="inline-block mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase rounded-full bg-teal-accent-400">
               {course?.category}
             </p>
-            <h2 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
+            <h1 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
               {course?.title}
-            </h2>
+            </h1>
             <p className="text-base mb-6 text-gray-500 md:text-lg">
               {course?.metaDesc}
             </p>

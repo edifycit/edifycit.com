@@ -2,28 +2,32 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Blogs | Edify College of IT",
-  description:
-    "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
-  openGraph: {
- 
-    title: "Blogs | Edify College of IT",
-    description:
-      "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
-      images:['https://edifycit.com/_next/image?url=%2Fimages%2Flogo1.webp&w=750&q=75']
-  },
-};
+
+
+
+
 const getSingleBlog = async (slug) => {
   const { data } = await axios.get(`https://admin.edifycit.com/api/blogs/single/${slug}`);
   
-  metadata.title = data.message.metaTitle
-  metadata.description = data.message.metaDesc
-  metadata.openGraph.title = data.message.metaTitle
-  metadata.openGraph.description = data.message.metaDesc
-  metadata.openGraph.images = data.message.featuredImage.url
+
   return data.message;
 };
+export async function generateMetadata({ params}) {
+const metaslug =  await getSingleBlog(params.slug)
+
+ 
+  return {
+    title: metaslug.title,
+    description:metaslug.metaDesc,
+    openGraph: {
+      title: metaslug.title,
+      description:metaslug.metaDesc,
+      images: [metaslug.featuredImage.url],
+    },
+  }
+}
+ 
+
 
 
 
@@ -57,9 +61,9 @@ const page = async ({ params }) => {
           />
           <div className="absolute bottom-0 z-10 px-4 py-6  md:w-1/2 bg-[#18171761] text-white rounded-tr-sm backdrop-blur-lg">
             <div className="relative">
-              <h2 className="pl-2 font-extrabold border-l-8 border-transparent md:text-2xl">
+              <h1 className="pl-2 font-extrabold border-l-8 border-transparent md:text-2xl">
                 {blog?.title}
-              </h2>
+              </h1>
               <span className="absolute top-0 right-0 h-full bg-white animate-show backdrop-blur-lg"></span>
               <span className="absolute top-0 left-0 w-2 h-full bg-white animate-blink backdrop-blur-lg"></span>
             </div>
