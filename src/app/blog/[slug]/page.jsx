@@ -7,15 +7,9 @@ import Link from "next/link";
 
 
 const getSingleBlog = async (slug) => {
-<<<<<<< HEAD
-  const { data } = await axios.get(
-    `https://admin.edifycit.com/api/blogs/single/${slug}`
-  );
-=======
   const { data } = await axios.get(`https://admin.edifycit.com/api/blogs/single/${slug}`);
   
 
->>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
   return data.message;
 };
 export async function generateMetadata({ params}) {
