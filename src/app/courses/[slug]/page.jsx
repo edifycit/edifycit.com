@@ -57,7 +57,7 @@ const page = async ({ params }) => {
         <div className="text-center flex items-center">
           <div>
             <p className="inline-block mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase rounded-full bg-teal-accent-400">
-              {course?.category}
+              {course?.category} 
             </p>
             <h1 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
               {course?.title}
@@ -176,11 +176,8 @@ const page = async ({ params }) => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       
->>>>>>> 7f0c9bd9d1bb5b90bdcb6a33e6b97a5ec75b9f9c
     </>
   );
 };
