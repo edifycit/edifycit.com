@@ -9,7 +9,6 @@ import {
 import axios from "axios";
 import Image from "next/image";
 import { openGraphImage } from "@/components/shared-metadata";
-import Head from "next/head";
 const coursesfetch = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
