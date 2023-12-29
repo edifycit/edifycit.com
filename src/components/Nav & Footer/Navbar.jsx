@@ -1,25 +1,25 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import LoadingBar from "react-top-loading-bar";
 import OutsideClickHandler from "react-outside-click-handler";
 
+const navLinks = [
+  { text: "Home", route: "/" },
+  { text: "About", route: "/about" },
+  { text: "Courses", route: "/courses" },
+  { text: "Blogs", route: "/blog" },
+  { text: "Stories", route: "/stories" },
+  { text: "News", route: "/news-and-updates" },
+  { text: "Team", route: "/team" },
+  { text: "Contact", route: "/contact" },
+];
+
 const NavBar = () => {
-  const [mobNavPosstion, setMobNavPosstion] = useState(false);
-
-  const navLinks = [
-    { text: "Home", route: "/" },
-    { text: "About", route: "/about" },
-    { text: "Courses", route: "/courses" },
-    { text: "Blogs", route: "/blog" },
-    { text: "Stories", route: "/stories" },
-    { text: "News", route: "/news-and-updates" },
-    { text: "Team", route: "/team" },
-    { text: "Contact", route: "/contact" },
-  ];
-
   const router = usePathname();
+  const [mobNavPosstion, setMobNavPosstion] = useState(false);
 
   return (
     <>
@@ -82,8 +82,8 @@ const NavBar = () => {
                   <span
                     className="w-6 border bg-gray-300 absolute mt-0 transition-all duration-300 ease-in-out"
                     style={{
-                      rotate: `${mobNavPosstion === false ? 0 : 40}deg`,
-                      top: `${mobNavPosstion === false ? 3 : 10}px`,
+                      rotate: `${mobNavPosstion === false ? 0 : 45}deg`,
+                      top: `${mobNavPosstion === false ? 5 : 50}%`,
                     }}
                   ></span>
                   <span
@@ -93,7 +93,8 @@ const NavBar = () => {
                   <span
                     className="w-6 border mt-0 bg-gray-300 absolute top-3 transition-all duration-300 ease-in-out"
                     style={{
-                      rotate: `${mobNavPosstion === false ? 0 : -40}deg`,
+                      rotate: `${mobNavPosstion === false ? 0 : -45}deg`,
+                      top: `${mobNavPosstion === false ? 50 : 50}%`,
                     }}
                   ></span>
                 </div>

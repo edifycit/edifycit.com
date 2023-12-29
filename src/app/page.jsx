@@ -56,11 +56,11 @@ const page = async () => {
   };
   return (
     <>
-       <script
-          key="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-        />
+      <script
+        key="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      />
       <Image
         width={700}
         height={700}

@@ -31,8 +31,16 @@ const About = () => {
                     className="overflow-hidden rounded-md about-grid"
                   >
                     {i === 2 ? (
-                      <video autoplay="autoplay" muted  loop className="w-full h-full object-cover">
-                        <source type="video/mp4" src="https://res.cloudinary.com/dqdsf1q5t/video/upload/v1702552860/WhatsApp_Video_2023-12-14_at_16.17.27_601ba76c_bwkrij.mp4" />
+                      <video
+                        autoplay="autoplay"
+                        muted
+                        loop
+                        className="w-full h-full object-cover"
+                      >
+                        <source
+                          type="video/mp4"
+                          src="https://res.cloudinary.com/dqdsf1q5t/video/upload/v1702552860/WhatsApp_Video_2023-12-14_at_16.17.27_601ba76c_bwkrij.mp4"
+                        />
                       </video>
                     ) : (
                       <Image
@@ -57,10 +65,7 @@ const About = () => {
         </div>
       </section>
       {/* Feture Section 1 */}
-      <section
-        id="feture"
-        className="grid  place-content-center mb-24"
-      >
+      <section id="feture" className="grid  place-content-center mb-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center">
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
@@ -109,10 +114,7 @@ const About = () => {
         </div>
       </section>
       {/* Feture Section 2 */}
-      <section
-        id="feture"
-        className="grid  place-content-center mb-24"
-      >
+      <section id="feture" className="grid  place-content-center mb-24">
         <div className="container mx-auto px-4 ">
           <div className="flex flex-wrap max-md:flex-col-reverse items-center">
             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">

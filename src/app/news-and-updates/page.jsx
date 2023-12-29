@@ -1,6 +1,8 @@
 import Components from "@/components/Components";
 import { Suspense } from "react";
 import { openGraphImage } from "@/components/shared-metadata";
+import axios from "axios";
+
 
 export const metadata = {
   title: "News and Events| Edify College of IT",
@@ -13,7 +15,22 @@ export const metadata = {
       "Stay informed with Edifycit's latest news and events. Celebrate milestones and connect with the digital community.",
   },
 };
+
+
+
+
+
+const newsFetch = async () => {
+  const { data } = await axios.get(
+    `https://admin.edifycit.com/api/news-and-updates`
+  );
+  return data.message;
+};
+
+
 const page = async () => {
+  const res = await newsFetch()
+  const news = res.data
   return (
     <>
       <div className="text-center max-w-xl mx-auto">
@@ -29,9 +46,9 @@ const page = async () => {
         </div>
       </div>
       <div className="py-10">
-        <Suspense fallback={<p>Loading ...</p>}>
-          <Components />
-        </Suspense>
+        {/* <Suspense fallback={<p>Loading...</p>}>
+        </Suspense> */}
+          <Components data = {news} />
       </div>
     </>
   );
