@@ -2,45 +2,32 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
-
-
 const singleCourse = async (slug) => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses/single/${slug}`
   );
 
-
-
   return data.message;
 };
-export async function generateMetadata({ params}) {
-  const metaslug =  await singleCourse(params.slug)
-  
-   
-    return {
+export async function generateMetadata({ params }) {
+  const metaslug = await singleCourse(params.slug);
+
+  return {
+    title: metaslug.title,
+    description: metaslug.metaDesc,
+    openGraph: {
       title: metaslug.title,
-      description:metaslug.metaDesc,
-      openGraph: {
-        title: metaslug.title,
-        description:metaslug.metaDesc,
-        images: [metaslug.featuredImage.url],
-      },
-    }
-  }
+      description: metaslug.metaDesc,
+      images: [metaslug.featuredImage.url],
+    },
+  };
+}
 const fetchRelatedCourses = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
   );
   return data.message.data;
 };
-
-
-
-
-
-
 
 const page = async ({ params }) => {
   const relatedCourses = await fetchRelatedCourses();
@@ -57,7 +44,7 @@ const page = async ({ params }) => {
         <div className="text-center flex items-center">
           <div>
             <p className="inline-block mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase rounded-full bg-teal-accent-400">
-              {course?.category} 
+              {course?.category}
             </p>
             <h1 className="mb-6 text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl ">
               {course?.title}
@@ -112,15 +99,15 @@ const page = async ({ params }) => {
               {course?.courseOutline.map((v, i) => (
                 <div className="tab" key={i}>
                   <input type="checkbox" name="accordion-1" id={i} />
-                  <label htmlFor={i} className="tab__label ">
+                  <label htmlFor={i} className="tab__label">
                     {v.moduleTitle}
                   </label>
                   <div className="tab__content overflow-scroll relative">
-                    <ul className={`p-2 max-w-full`}>
+                    <ul className={`p-2 max-w-full bg-[#25252575]`}>
                       {v?.topics?.map((topics, topicIndex) => {
                         return (
                           <li
-                            className="overflow-hidden whitespace-nowrap overflow-ellipsis max-w-xs"
+                            className="overflow-hidden whitespace-nowrap overflow-ellipsis"
                             key={topicIndex}
                           >
                             {topics}
@@ -176,8 +163,6 @@ const page = async ({ params }) => {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 };

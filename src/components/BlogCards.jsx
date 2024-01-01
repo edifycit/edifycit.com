@@ -20,7 +20,7 @@ const BlogCards = async ({ filters }) => {
 
   return (
     <>
-      <BlogSearch filters={filters} />
+      {/* <BlogSearch filters={filters} /> */}
 
       <div className="grid grid-cols-1 gap-7 py-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:[&>:nth-child(1)]:col-span-2 lg:[&>:nth-child(1)]:aspect-video [&>:nth-child(1)>img]:h-[70%]">
         {data?.map((v, i) => (
