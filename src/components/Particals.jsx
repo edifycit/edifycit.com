@@ -1,63 +1,42 @@
 "use client";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import React, { useEffect } from "react";
 
 const Particals = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-  const particlesLoaded = (container) => {};
+  useEffect(() => {
+    function createStar() {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      const xPos = Math.random() * window.innerWidth;
+      const yPos = Math.random() * window.innerHeight;
+      star.style.left = `${xPos}px`;
+      star.style.top = `${yPos}px`;
+      document.body.appendChild(star);
+
+      const blinkDelay = Math.random() * 1000 + 500; // Random delay for blinking
+
+      setTimeout(() => {
+        star.style.opacity = "1";
+        setTimeout(() => {
+          star.style.opacity = "0.5";
+          // Delay before removing the star element
+        }, Math.random() * 200 + 1000); // Duration for the star to remain visible
+      }, blinkDelay); // Delay before the star appears initially
+    }
+
+    function createStarryNight() {
+      for (let i = 0; i < 50; i++) {
+        createStar();
+      }
+    }
+
+    // Start the starry night effect when the window loads
+    window.onload = createStarryNight;
+  });
+
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        fpsLimit: 60,
-        particles: {
-          shape: {
-            type: "circle",
-          },
-          size: {
-            random: {
-              enable: true,
-              minimumValue: 0.5,
-            },
-            value: 1.4,
-          },
-          color: {
-            value: "#f1f1f1",
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 1080,
-            },
-            limit: 0,
-            value: 100,
-          },
-          opacity: {
-            animation: {
-              enable: true,
-              minimumValue: 0.5,
-              speed: 1.6,
-              sync: false,
-            },
-            random: {
-              enable: true,
-              minimumValue: 0.1,
-            },
-            value: 1,
-          },
-          interactivity: {
-            detectsOn: "canvas",
-            events: {
-              resize: true,
-            },
-          },
-        },
-      }}
-    />
+    <>
+      <div class="starry-night"></div>
+    </>
   );
 };
 
