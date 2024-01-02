@@ -71,7 +71,7 @@ const CourseCard = ({courses}) => {
       <Slider {...settings}>
       {courses.map((v,i)=>{
         return(
-          <Link href={`/courses/${v.slug}`} key={i} className="px-4 lg:h-[50vh] md:h-auto">
+          <Link href={`/courses/${v.slug}`} key={i} className="px-4 md:h-auto">
         <div className="flex flex-col h-full gap-2 group ">
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:scale-105 duration-300 shadow-black">
             <Image
@@ -79,7 +79,7 @@ const CourseCard = ({courses}) => {
               height={700}
               src={v?.featuredImage?.url}
               alt={v?.featuredImage?.altText}
-              className="h-full"
+              className="h-[30vh] w-full object-cover"
             />
             <div className="absolute top-0 right-2 off bg-green-700 shadow flex flex-col-reverse p-2 pb-6 text-center font-bold text-white">
               <span className="block">Off</span> {`${v?.percentageOfDiscount}%`}
