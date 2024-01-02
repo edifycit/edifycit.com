@@ -71,7 +71,7 @@ const CourseCard = ({courses}) => {
       <Slider {...settings}>
       {courses.map((v,i)=>{
         return(
-          <Link href={`/courses/${v.slug}`} key={i} className="px-4 h-[50vh]">
+          <Link href={`/courses/${v.slug}`} key={i} className="px-4 lg:h-[50vh] md:h-auto">
         <div className="flex flex-col h-full gap-2 group ">
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:scale-105 duration-300 shadow-black">
             <Image

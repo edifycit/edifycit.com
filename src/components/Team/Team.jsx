@@ -58,6 +58,21 @@ const Team = () => {
       category: "MK",
     },
     {
+      id: "14",
+      designation: "E-Commerace Head",
+      employe: "Fariha Awan",
+      className: "edify-team-head-background",
+      image: "/images/team/Farihasb.webp",
+      category: "EC",
+    },
+    {
+      id: "9",
+      designation: "Sr. Web Developer",
+      employe: "Ghulam Qadir",
+      image: "/images/team/qadir.webp",
+      category: "PD",
+    },
+    {
       id: "7",
       designation: "Digital Marketer",
       employe: "Hafiz M.Haseeb",
@@ -72,13 +87,7 @@ const Team = () => {
       category: "BDO",
     },
 
-    {
-      id: "9",
-      designation: "Sr. Web Developer",
-      employe: "Ghulam Qadir",
-      image: "/images/team/qadir.webp",
-      category: "PD",
-    },
+  
     {
       id: "10",
       designation: "Web Developer",
@@ -111,14 +120,7 @@ const Team = () => {
       category: "GP",
     },
 
-    {
-      id: "14",
-      designation: "E-Commerace Management",
-      employe: "Fariha Awan",
-      className: "edify-team-head-background",
-      image: "/images/team/Farihasb.webp",
-      category: "EC",
-    },
+    
     {
       id: "15",
       designation: "Web Developer",
@@ -194,7 +196,7 @@ const Team = () => {
       id: "28",
       designation: "Graphic Designer",
       employe: "Aleesha Teahreem",
-      image: "/images/team/AleeshaSb.webp",
+      image: "/images/team/aleeshasb.webp",
       category: "PD",
     },
   ];

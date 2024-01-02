@@ -22,7 +22,7 @@ const Coursefeature = () => {
       noOfCourses: 8,
     },
     {
-      cate: "Cyber Security",
+      cate: "Data Science",
       noOfCourses: 1,
     },
     {
