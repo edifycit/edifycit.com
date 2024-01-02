@@ -45,7 +45,7 @@ const Team = () => {
       id: "3",
       designation: " Managing Director",
       employe: "Tariq Ameen",
-      image: "",
+      image: "/images/team/Tariqsb.webp",
       category: "DT",
     },
   
@@ -116,7 +116,7 @@ const Team = () => {
       designation: "E-Commerace Management",
       employe: "Fariha Awan",
       className: "edify-team-head-background",
-      image: "",
+      image: "/images/team/Farihasb.webp",
       category: "EC",
     },
     {
@@ -180,7 +180,7 @@ const Team = () => {
       id: "26",
       designation: "App Developer",
       employe: "Muhammad Suffian",
-      image: "",
+      image: "/images/team/Sufiyaansb.webp",
       category: "PD",
     },
     {
@@ -188,6 +188,13 @@ const Team = () => {
       designation: "App Developer",
       employe: "Ameeq Ahmad",
       image: "/images/team/ameeq.webp",
+      category: "PD",
+    },
+    {
+      id: "28",
+      designation: "Graphic Designer",
+      employe: "Aleesha Teahreem",
+      image: "/images/team/AleeshaSb.webp",
       category: "PD",
     },
   ];
