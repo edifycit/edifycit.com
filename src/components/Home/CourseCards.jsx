@@ -79,7 +79,7 @@ const CourseCard = ({courses}) => {
               height={700}
               src={v?.featuredImage?.url}
               alt={v?.featuredImage?.altText}
-              className="h-[30vh] w-full object-cover"
+              className="h-[40vh] w-full object-cover"
             />
             <div className="absolute top-0 right-2 off bg-green-700 shadow flex flex-col-reverse p-2 pb-6 text-center font-bold text-white">
               <span className="block">Off</span> {`${v?.percentageOfDiscount}%`}

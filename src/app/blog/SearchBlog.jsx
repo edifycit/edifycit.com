@@ -19,7 +19,7 @@ var key = useSearchParams().get("keyword")
     <div className="relative group flex justify-end">
       <input
         ref={s}
-        onChange={(e) => router.push(`/courses?keyword=${e.target.value}`)}
+        onChange={(e) => router.push(`/blog?keyword=${e.target.value}`)}
         type="search"
         placeholder="Search"
         className="text-white w-[340px] outline-none focus:ring-2 bg-black border border-white/20 rounded-lg py-2 px-3"
