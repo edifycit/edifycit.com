@@ -21,10 +21,10 @@ const Components = async ({ data }) => {
     <div className="grid gap-6 gap-y-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {data?.map((v, i) => {
         return (
-          <motion.div
+          <div
             key={i}
             layoutId={v._id}
-            onClick={() => openModal(v)}
+            // onClick={() => openModal(v)}
             className="bg-[#2b2a2a] rounded-md overflow-hidden shadow-lg  flex flex-col"
           >
             <motion.div className="relative">
@@ -51,15 +51,15 @@ const Components = async ({ data }) => {
               <div className="flex gap-4">
                 <time className="flex gap-2 items-center">
                   <i className="bx bx-time"></i>
-                  {new Date(v?.eventdate).toDateString()}
+                  {new Date(v?.date)?.toDateString()}
                 </time>
               </div>
             </div>
-          </motion.div>
+          </div>
         );
       })}
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {selectedId && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -106,7 +106,7 @@ const Components = async ({ data }) => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

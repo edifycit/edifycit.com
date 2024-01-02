@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body suppressHydrationWarning={true}>
-        <Particals />
+        {/* <Particals /> */}
         <NavBar />
 
         <main className="max-w-[100vw] px-3 overflow-hidden">

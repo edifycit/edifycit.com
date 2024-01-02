@@ -35,7 +35,7 @@ const Particals = () => {
 
   return (
     <>
-      <div class="starry-night"></div>
+      <div className="starry-night"></div>
     </>
   );
 };

@@ -2,32 +2,45 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
+
+
+
+
 const singleCourse = async (slug) => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses/single/${slug}`
   );
 
+
+
   return data.message;
 };
-export async function generateMetadata({ params }) {
-  const metaslug = await singleCourse(params.slug);
-
-  return {
-    title: metaslug.title,
-    description: metaslug.metaDesc,
-    openGraph: {
+export async function generateMetadata({ params}) {
+  const metaslug =  await singleCourse(params.slug)
+  
+   
+    return {
       title: metaslug.title,
-      description: metaslug.metaDesc,
-      images: [metaslug.featuredImage.url],
-    },
-  };
-}
+      description:metaslug.metaDesc,
+      openGraph: {
+        title: metaslug.title,
+        description:metaslug.metaDesc,
+        images: [metaslug.featuredImage.url],
+      },
+    }
+  }
 const fetchRelatedCourses = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
   );
   return data.message.data;
 };
+
+
+
+
+
+
 
 const page = async ({ params }) => {
   const relatedCourses = await fetchRelatedCourses();
@@ -80,14 +93,14 @@ const page = async ({ params }) => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-col lg:flex-row gap-10 my-10">
-        <div className="lg:w-[70%] w-full">
+      <section className="grid gap-20 my-10 grid-cols-6">
+        <div className="lg:col-span-4 col-span-6">
           <section className="mb-10">
             <h2 className="pb-2 text-2xl font-semibold text-blue-500">
               About this Course
             </h2>
             <div
-              className="text-gray-400 mt-6 courseIntro  md:w-full w-full"
+              className="text-gray-400 mt-6 courseIntro"
               dangerouslySetInnerHTML={{ __html: course?.desc }}
             />
           </section>
@@ -95,21 +108,18 @@ const page = async ({ params }) => {
             <h2 className="pb-2 text-2xl font-semibold text-blue-500">
               Course Outline
             </h2>
-            <div className="accordion md:w-full">
+            <div className="accordion">
               {course?.courseOutline.map((v, i) => (
                 <div className="tab" key={i}>
                   <input type="checkbox" name="accordion-1" id={i} />
-                  <label htmlFor={i} className="tab__label">
+                  <label htmlFor={i} className="tab__label ">
                     {v.moduleTitle}
                   </label>
                   <div className="tab__content overflow-scroll relative">
-                    <ul className={`p-2 max-w-full bg-[#25252575]`}>
+                    <ul className={`p-2 max-w-full`}>
                       {v?.topics?.map((topics, topicIndex) => {
                         return (
-                          <li
-                            className="overflow-hidden whitespace-nowrap overflow-ellipsis"
-                            key={topicIndex}
-                          >
+                          <li className="overflow-hidden whitespace-nowrap mb-1 overflow-ellipsis max-w-xs" key={topicIndex}>
                             {topics}
                           </li>
                         );
@@ -122,17 +132,17 @@ const page = async ({ params }) => {
             </div>
           </section>
         </div>
-        <div className="lg:w-[30%] w-full">
+        <div className="lg:col-span-2 col-span-6">
           <div className=" text-white">
             <h2 className="pb-2 text-2xl text-white font-semibold">
               Related Courses
             </h2>
-            <div className="flex flex-col gap-4 py-8">
+            <div className="flex flex-col gap-6 py-8 ">
               {relatedCourses.map((v, i) => (
                 <Link key={i} href={`/courses/${v.slug}`}>
                   <div key={i} className="max-w-7xl mx-auto">
-                    <div className="relative group grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                      <div className="relative bg-[#252525] w-full md:w-full lg:w-full ring-1 ring-gray-900/5 rounded-lg overflow-hidden leading-none grid grid-cols-3">
+                    <div className="relative group">
+                      <div className="relative bg-[#252525] ring-1 ring-gray-900/5 rounded-lg overflow-hidden leading-none grid grid-cols-3">
                         <div className="w-full overflow-hidden">
                           <Image
                             width={300}
@@ -150,8 +160,7 @@ const page = async ({ params }) => {
                             className="block text-sm text-gray-400 group-hover:text-blue-400 transition duration-200"
                             target="_blank"
                           >
-                            Read Article
-                            <i className="bx bx-right-arrow-alt"></i>
+                            Read Article <i className="bx bx-right-arrow-alt"></i>
                           </button>
                         </div>
                       </div>
@@ -163,6 +172,8 @@ const page = async ({ params }) => {
           </div>
         </div>
       </section>
+
+      
     </>
   );
 };
