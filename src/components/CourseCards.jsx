@@ -46,7 +46,7 @@ const courseCards = async ({filters}) => {
                           {`${v.weeks} weeks`}
                         </span>
                       </div>
-                      <h2 className="my-4 font-bold uppercase tracking-wide text-gray-100 w-full line-clamp-2 overflow-hidden">
+                      <h2 className="my-4 font-bold caption-bottom tracking-wide text-gray-100 w-full line-clamp-2 overflow-hidden">
                         {v.title}
                       </h2>
                     </div>
