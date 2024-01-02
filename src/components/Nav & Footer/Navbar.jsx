@@ -82,7 +82,8 @@ const NavBar = () => {
                   <span
                     className="w-6 border bg-gray-300 absolute mt-0 top-1 transition-all duration-300 ease-in-out"
                     style={{
-                      rotate: `${mobNavPosstion === false ? 0 : 40}deg`,
+                      rotate: `${mobNavPosstion === false ? 0 : "40deg"} `,
+                     
                     }}
                   ></span>
                   <span
@@ -92,7 +93,8 @@ const NavBar = () => {
                   <span
                     className="w-6 border mt-0 bg-gray-300 absolute top-3 transition-all duration-300 ease-in-out"
                     style={{
-                      rotate: `${mobNavPosstion === false ? 0 : -40}deg`,
+                      rotate: `${mobNavPosstion === false ? 0 : "-40deg"}`, 
+                     
                     }}
                   ></span>
                 </div>
