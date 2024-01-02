@@ -13,7 +13,7 @@ const CourseCard = ({courses}) => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -23,7 +23,7 @@ const CourseCard = ({courses}) => {
       {
         breakpoint: 1640,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -71,8 +71,8 @@ const CourseCard = ({courses}) => {
       <Slider {...settings}>
       {courses.map((v,i)=>{
         return(
-          <Link href={`/courses/${v.slug}`} key={i} className="px-4">
-        <div className="flex flex-col h-full gap-2 group">
+          <Link href={`/courses/${v.slug}`} key={i} className="px-4 h-[50vh]">
+        <div className="flex flex-col h-full gap-2 group ">
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:scale-105 duration-300 shadow-black">
             <Image
               width={700}
