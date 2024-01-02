@@ -86,8 +86,8 @@ const Hero = () => {
             <h1 className=" py-4 text-4xl lg:text-6xl font-semibold text-white ">
               Master Your Skills.
             </h1>
-            <p className="relative z-1 text-sm md:text-lg  lg:text-xl leading-[30px] md:leading-[36px] lg:leading-[44px] mb-5 md:mb-20 md:10/12  lg:w-9/12 text-[#7d8590]">
-              Enroll in professional IT programs led by industry leaders
+            <p className="relative z-1 text-sm md:text-lg  lg:text-xl leading-[30px] md:leading-[36px] md:text-white lg:leading-[44px] mb-5 md:mb-20 md:10/12 sm:text-white sm:text-lg lg:w-9/12 text-[#7d8590]">
+            Embark on your professional journey with industry-leading experts by enrolling in our distinguished IT programs.
             </p>
           </div>
           <div className="flex md:space-x-5 max-md:flex-col">
@@ -100,12 +100,13 @@ const Hero = () => {
                   onChange={(e) => setKeyword(e.target.value)}
                   name="user_email"
                   id="user_email"
+                  required
                   autoComplete="off"
                   spellCheck="false"
                 />
 
                 <button
-                  type="button"
+            
                   className="mb-10 md:mb-0 py-3 w-1/2 home-campaign-signup-button text-[16px] max-md:rounded-md md:rounded-e-md text-white font-semibold bg-indigo-700"
                 >
                   Search

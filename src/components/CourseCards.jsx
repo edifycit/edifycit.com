@@ -58,13 +58,12 @@ const courseCards = async ({filters}) => {
         </div>
       ) : (
         <>
-          <div style={{ backgroundColor: "#07121e" }}>
-            <h1
-              className=" p-5"
-              style={{ margin: "0", color: "white", textAlign: "center" }}
+          <div className="bg-transparent py-10">
+            <p
+              className=" p-5 text-white text-center text-2xl"
             >
               Courses Not Found
-            </h1>
+            </p>
           </div>
         </>
       )}

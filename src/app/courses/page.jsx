@@ -58,6 +58,7 @@ const page = (props) => {
     <>
       <div className="mt-10">
         <div className="text-center max-w-xl mx-auto">
+
           <h1 className="text-6xl md:text-7xl capitalize font-bold mb-5 text-white">
             {/* bg-clip-text */}
             Offered Courses
@@ -71,9 +72,7 @@ const page = (props) => {
           </div>
         </div>
 
-       
-
-      
+    <Search/>
       </div>
 
       {/* Coures Cards  ------*/}

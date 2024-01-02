@@ -1,6 +1,7 @@
 import Blogscard from "@/components/BlogCards";
 import Pagination from "@/components/Pagination/Pagination";
 import { openGraphImage } from "@/components/shared-metadata";
+import Search from "./SearchBlog";
 
 export const metadata = {
   title: "Blogs | Edify College of IT",
@@ -13,8 +14,7 @@ export const metadata = {
       "Dive into our digital expertise with informative articles and insights. Stay ahead with Edifycit's blog. Discover, learn, and thrive in your digital journey.",
   },
 };
-const page = ({searchParams}) => {
-
+const page = ({ searchParams }) => {
   return (
     <>
       <div className="text-center max-w-xl mx-auto">
@@ -29,8 +29,10 @@ const page = ({searchParams}) => {
           <span className="inline-block w-1 h-1 rounded-full bg-blue-500 ml-1"></span>
         </div>
       </div>
-      <Blogscard filters={searchParams} />
-     
+      <section>
+        <Search />
+        <Blogscard filters={searchParams} />
+      </section>
     </>
   );
 };
