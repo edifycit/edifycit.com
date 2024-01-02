@@ -9,7 +9,6 @@ import {
 import axios from "axios";
 import Image from "next/image";
 import { openGraphImage } from "@/components/shared-metadata";
-import Head from "next/head";
 const coursesfetch = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
@@ -57,11 +56,11 @@ const page = async () => {
   };
   return (
     <>
-       <script
-          key="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-        />
+      <script
+        key="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      />
       <Image
         width={700}
         height={700}

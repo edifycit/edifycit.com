@@ -17,7 +17,7 @@ const Search = ({ value }) => {
         onChange={(e) => setKeyword(e.target.value)}
         type="text"
         placeholder="Search"
-        className="text-white focus:ring-0 bg-black border border-white/20 rounded-full py-2 px-3"
+        className="text-white w-[240px] outline-none focus:ring-2 bg-black border border-white/20 rounded-full py-2 px-3"
       />
       <i className="bx text-white bg-black absolute top-1/2 -translate-y-1/2 right-3 bx-search"></i>
     </div>

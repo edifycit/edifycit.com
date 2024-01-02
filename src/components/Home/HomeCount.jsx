@@ -14,7 +14,7 @@ const HomeCount = () => {
     <>
       <div className="flex max-md:gap-4">
         <div
-          className="max-md:w-[8.3%] flex flex-col md:flex-row items-center md:pl-[50px]"
+          className="ml-5 mr-8 flex flex-col md:flex-row items-center"
           ref={ref}
         >
           <div className="h-full">
@@ -59,6 +59,7 @@ const HomeCount = () => {
         </div>
       </div>
       <div
+        className=" ml-4"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-100px)",
@@ -68,16 +69,7 @@ const HomeCount = () => {
       >
         <CountBanner />
       </div>
-      {/* side line animation */}
-      {/* <div className="w-[8.3%] h-28 flex flex-col items-center" ref={ref1}>
-        <div
-          style={{
-            height: isInView2 ? "100%" : "0",
-            transition: "all  0.5s",
-          }}
-          className="bg-gradient-to-t from-indigo-500 h-full w-[4px]"
-        />
-      </div> */}
+
       {/* side line animation */}
     </>
   );

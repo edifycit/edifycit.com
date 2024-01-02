@@ -4,28 +4,25 @@ import Partnership from "@/components/Burrh/Partnership";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-
 const Hero = () => {
   const ref = useRef(null);
   const ref1 = useRef(null);
   const isInView = useInView(ref, { once: false });
   const isInView2 = useInView(ref1, { once: false });
 
-
   var [keyword, setKeyword] = useState("");
   var router = useRouter();
 
-
-  const submitHandler = (e) =>{
-    e.preventDefault()
+  const submitHandler = (e) => {
+    e.preventDefault();
     router.push(`/courses?keyword=${keyword}`);
-  }
+  };
 
   return (
     <>
       <div className="flex max-md:gap-4">
         {/* side line animation */}
-        <div className="md:w-[8.3%] flex flex-col items-center pt-2" ref={ref}>
+        <div className=" ml-2 mr-10 flex flex-col items-center pt-2" ref={ref}>
           <div className="border-2 rounded-full h-5 mb-2 aspect-square border-gray-500 "></div>
           <div className="h-full">
             <div
@@ -44,7 +41,10 @@ const Hero = () => {
             }}
             className="relative my-4 flex justify-center items-center"
           >
-            <span style={{filter:'blur(18px)'}} className="absolute  bg-[#7c72ff] rounded-full h-full w-full -z-[9999999]" />
+            <span
+              style={{ filter: "blur(18px)" }}
+              className="absolute  bg-[#7c72ff] rounded-full h-full w-full -z-[9999999]"
+            />
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -83,12 +83,12 @@ const Hero = () => {
           }}
         >
           <div className="">
-          <h1 className=" py-4 text-4xl lg:text-6xl font-semibold text-white ">
-            Master Your Skills.
-          </h1>
-          <p className="relative z-1 text-sm md:text-lg  lg:text-xl leading-[30px] md:leading-[36px] lg:leading-[44px] mb-5 md:mb-20 md:10/12  lg:w-9/12 text-[#7d8590]">
-            Enroll in professional IT programs led by industry leaders
-          </p>
+            <h1 className=" py-4 text-4xl lg:text-6xl font-semibold text-white ">
+              Master Your Skills.
+            </h1>
+            <p className="relative z-1 text-sm md:text-lg  lg:text-xl leading-[30px] md:leading-[36px] lg:leading-[44px] mb-5 md:mb-20 md:10/12  lg:w-9/12 text-[#7d8590]">
+              Enroll in professional IT programs led by industry leaders
+            </p>
           </div>
           <div className="flex md:space-x-5 max-md:flex-col">
             <form onSubmit={submitHandler} className="md:w-[60%]">
@@ -127,7 +127,7 @@ const Hero = () => {
         <Partnership />
       </div>
       {/* side line animation */}
-      <div className="w-[8.3%] h-28 flex flex-col items-center pt-2" ref={ref1}>
+      <div className="ml-2 mr-10 w-6 h-28 flex flex-col items-center pt-2" ref={ref1}>
         <div
           style={{
             height: isInView2 ? "100%" : "0",

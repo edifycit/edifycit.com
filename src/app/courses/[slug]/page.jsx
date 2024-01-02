@@ -119,7 +119,7 @@ const page = async ({ params }) => {
                     <ul className={`p-2 max-w-full`}>
                       {v?.topics?.map((topics, topicIndex) => {
                         return (
-                          <li className="overflow-hidden whitespace-nowrap overflow-ellipsis max-w-xs" key={topicIndex}>
+                          <li className="overflow-hidden whitespace-nowrap mb-1 overflow-ellipsis max-w-xs" key={topicIndex}>
                             {topics}
                           </li>
                         );

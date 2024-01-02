@@ -17,7 +17,7 @@ const HomeCourses = ({courses}) => {
         {/* side line */}
 
         <div
-          className="max-md:w-[8.3%] flex flex-col md:flex-row items-center md:pl-[50px]"
+          className="ml-5 mr-10 flex flex-col md:flex-row items-center"
           ref={ref}
         >
           <div className="h-full">
@@ -66,7 +66,7 @@ const HomeCourses = ({courses}) => {
 
 
       <div
-        className="max-w-[100%] "
+        className="max-w-[100%] ml-1"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-100px)",
@@ -77,7 +77,7 @@ const HomeCourses = ({courses}) => {
         <CourseCards courses={courses} />
       </div>
 
-      <div className="w-[8.3%] h-28 flex flex-col items-center" ref={ref1}>
+      <div className="ml-5 w-0 mr-10 h-28 flex flex-col items-center" ref={ref1}>
         <div
           style={{
             height: isInView2 ? "100%" : "0",

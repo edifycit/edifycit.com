@@ -29,18 +29,16 @@ const metaslug =  await getSingleBlog(params.slug)
  
 
 
-
-
 const getRecentBlogs = async () => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/blogs?limit=6`);
+  const { data } = await axios.get(
+    `https://admin.edifycit.com/api/blogs?limit=6`
+  );
   return data.message?.data;
 };
-
 
 const page = async ({ params }) => {
   const blog = await getSingleBlog(params.slug);
   const recentBlogs = await getRecentBlogs();
-
 
   var social = [
     { className: "bx bxl-meta text-white" },
@@ -76,10 +74,6 @@ const page = async ({ params }) => {
                 Published on{" "}
                 {new Date(blog.createdAt).toDateString().substring(3)}
               </time>
-              {/* <span className="items-center hidden gap-2 mt-1 text-gray-300 md:flex ">
-                <i className="bx bx-user"></i>
-                Author
-              </span> */}
             </div>
             <span className="bg-[#303094cc] py-1 px-2 rounded-lg">
               {blog?.category}
@@ -99,22 +93,21 @@ const page = async ({ params }) => {
             </span>
           </div>
         </div>
-        <section className="gap-20 grid grid-cols-1 lg:grid-cols-6">
-
+        <section className="flex gap-20 flex-col md:flex-col lg:flex-row">
           <main
             dangerouslySetInnerHTML={{ __html: blog?.desc }}
             className="col-span-4 max-w-[800px] courseIntro"
           ></main>
 
-          <div className="sticky col-span-2 top-0">
+          <div className="sticky lg:px-0 px-3 top-0">
             <div className=" border-red-400 text-white md:-mt-16 md:pt-16 ">
-              <h2 className="pb-2 text-2xl font-semibold  border-b ">
+              <h2 className="pb-2 text-2xl font-semibold border-b ">
                 Recents
               </h2>
               <div className="flex flex-col gap-6 py-4">
                 {recentBlogs?.map((v, i) => (
                   <div key={i} className="max-w-7xl mx-auto">
-                    <div className="relative group">
+                    <div className="relative group grid lg:grid-cols-1 grid-cols-1">
                       <div className="relative bg-gray-800 ring-1 ring-gray-900/5 rounded-lg overflow-hidden leading-none grid grid-cols-3">
                         <div className="w-full overflow-hidden">
                           <Image
@@ -141,6 +134,7 @@ const page = async ({ params }) => {
               </div>
             </div>
           </div>
+
         </section>
       </section>
     </>
