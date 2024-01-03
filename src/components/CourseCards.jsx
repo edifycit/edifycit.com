@@ -1,18 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import axios from "axios";
 import Image from "next/image";
-import queryStr from 'query-string'
 
 
-const coursesfetch = async (filters) => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})} `);
-  return data.message.data;
-};
 
-const courseCards = async ({filters}) => {
 
-  const data = await coursesfetch(filters);
+
+const courseCards = async ({data}) => {
 
 
   return (

@@ -1,6 +1,6 @@
 import Blogscard from "@/components/BlogCards";
 import Pagination from "@/components/Pagination/Pagination";
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 import Search from "./SearchBlog";
 
 export const metadata = {

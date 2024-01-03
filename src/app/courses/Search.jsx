@@ -5,14 +5,10 @@ import { useRouter ,useSearchParams} from "next/navigation";
 const Search = ({ value }) => {
   var router = useRouter();
   var s = useRef(null)
-var key = useSearchParams().get("keyword")
+  var key = useSearchParams().get("keyword")
   
-
-
   useEffect(()=>{
-
-      s.current.value = key
-    
+    s.current.value = key
   },[])
 
   return (

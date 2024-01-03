@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Contact Us | Edify College of IT",

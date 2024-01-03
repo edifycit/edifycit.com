@@ -1,6 +1,6 @@
 import Team from '@/components/Team/Team'
 import React from 'react'
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Our Team | Edify College of IT",

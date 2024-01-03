@@ -1,6 +1,6 @@
 import Components from "@/components/Components";
 import { Suspense } from "react";
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 import axios from "axios";
 
 

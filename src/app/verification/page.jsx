@@ -1,5 +1,5 @@
 import React from "react";
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Verify Your Certificate | Edify College of IT",
