@@ -1,6 +1,6 @@
 import React from 'react'
 import Ambassdor from "@/components/Ambassdor/Ambassdor"
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Become An Ambassador | Edify College of IT",

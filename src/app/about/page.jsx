@@ -1,6 +1,6 @@
 import About from '@/components/About/About'
 import React from 'react'
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "About Us | Edify College of IT ",

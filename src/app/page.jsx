@@ -8,7 +8,7 @@ import {
 } from "@/components/Home/Export";
 import axios from "axios";
 import Image from "next/image";
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 const coursesfetch = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`

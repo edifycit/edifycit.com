@@ -1,6 +1,6 @@
 import Apply from '@/components/Apply/Apply'
 import React from 'react'
-import { openGraphImage } from "@/components/shared-metadata";
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Edify College of IT | Apply",

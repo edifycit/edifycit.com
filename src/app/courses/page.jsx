@@ -1,7 +1,8 @@
 import CourseCards from "@/components/CourseCards";
 import Search from "./Search";
-
-import { openGraphImage } from "@/components/shared-metadata";
+import axios from "axios";
+import queryStr from 'query-string'
+import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
   title: "Courses | Edify College of IT",
@@ -53,7 +54,15 @@ const buttons = [
   },
 ];
 
-const page = (props) => {
+const coursesfetch = async (filters) => {
+  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})} `);
+  return data.message.data;
+};
+
+const page = async (props) => {
+
+  var courses = await coursesfetch(props.searchParams)
+
   return (
     <>
       <div className="mt-10">
@@ -77,7 +86,7 @@ const page = (props) => {
 
       {/* Coures Cards  ------*/}
       <section >
-        <CourseCards filters={props.searchParams} />
+        <CourseCards data={courses} />
       </section>
     </>
   );
