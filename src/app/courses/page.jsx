@@ -17,7 +17,8 @@ export const metadata = {
 };
 
 const coursesfetch = async (filters) => {
-  const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})} `);
+  var data = await fetch(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})}`,{cache:"no-store"});
+  data = await data.json()
   return data.message.data;
 };
 
