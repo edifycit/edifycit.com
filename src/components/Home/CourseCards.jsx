@@ -65,10 +65,9 @@ const CourseCard = ({ courses }) => {
       <Slider {...settings}>
         {courses.map((v, i) => {
           return (
-            <div>
+            <div key={i}>
               <Link
                 href={`/courses/${v.slug}`}
-                key={i}
                 className="px-4 block"
               >
                 <div className="group">
