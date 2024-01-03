@@ -23,6 +23,7 @@ const Coursefeature = () => {
     },
     {
       cate: "Data Science",
+      
       noOfCourses: 1,
     },
     {
