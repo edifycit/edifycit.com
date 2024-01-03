@@ -2,14 +2,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter ,useSearchParams} from "next/navigation";
 
-const Search = ({ value }) => {
+const Search = () => {
+
   var router = useRouter();
   var s = useRef(null)
   var key = useSearchParams().get("keyword")
   
-  useEffect(()=>{
-    s.current.value = key
-  },[])
+  // useEffect(()=>{
+
+  //   s.current.value = key
+  // },[])
 
   return (
     <div className="relative group flex justify-end">

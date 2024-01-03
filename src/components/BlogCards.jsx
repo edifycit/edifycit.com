@@ -3,13 +3,11 @@ import axios from "axios";
 import Image from "next/image";
 import queryStr from "query-string";
 import Pagination from "./Pagination/Pagination";
-import BlogSearch from "./BlogSearch/BlogSearch";
 
 const blogfetch = async (filters) => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/blogs?${queryStr.stringify(filters)}`
   );
-  // console.log(data.message.data)
   return data.message;
 };
 
@@ -20,7 +18,6 @@ const BlogCards = async ({ filters }) => {
 
   return (
     <>
-      {/* <BlogSearch filters={filters} /> */}
 
       <div className="grid grid-cols-1 gap-7 py-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:[&>:nth-child(1)]:col-span-2 lg:[&>:nth-child(1)]:aspect-video [&>:nth-child(1)>img]:h-[70%]">
         {data?.map((v, i) => (

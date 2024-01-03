@@ -16,44 +16,6 @@ export const metadata = {
   },
 };
 
-const buttons = [
-  {
-    id: "1",
-    buttonText: "All",
-    value: "All",
-  },
-  {
-    id: "2",
-    buttonText: "Development",
-    value: "Development",
-  },
-  {
-    id: "3",
-    buttonText: " Art & Design",
-    value: "Art & Design",
-  },
-  {
-    id: "4",
-    buttonText: "Digital Marketing",
-    value: "Markerters",
-  },
-  {
-    id: "5",
-    buttonText: "Amazon",
-    value: "Amazon",
-  },
-  {
-    id: "6",
-    buttonText: "Languages",
-    value: "Languages",
-  },
-  {
-    id: "7",
-    buttonText: "Data Science",
-    value: "Data Science",
-  },
-];
-
 const coursesfetch = async (filters) => {
   const { data } = await axios.get(`https://admin.edifycit.com/api/courses?${queryStr.stringify({...filters,limit:50})} `);
   return data.message.data;
@@ -81,7 +43,7 @@ const page = async (props) => {
           </div>
         </div>
 
-    <Search/>
+        <Search/>
       </div>
 
       {/* Coures Cards  ------*/}
