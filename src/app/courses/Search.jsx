@@ -8,10 +8,11 @@ const Search = () => {
   var s = useRef(null)
   var key = useSearchParams().get("keyword")
   
-  // useEffect(()=>{
-
-  //   s.current.value = key
-  // },[])
+  useEffect(()=>{
+    if(key){
+      s.current.value = key
+    }
+  },[])
 
   return (
     <div className="relative group flex justify-end">
