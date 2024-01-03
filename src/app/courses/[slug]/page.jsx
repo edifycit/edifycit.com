@@ -93,8 +93,8 @@ const page = async ({ params }) => {
         </div>
       </section>
 
-      <section className="grid gap-20 my-10 grid-cols-6">
-        <div className="lg:col-span-4 col-span-6">
+      <section className="grid lg:gap-x-20 my-10 grid-cols-6">
+        <div className="lg:col-span-4 mb-20 lg:mb-0 col-span-6">
           <section className="mb-10">
             <h2 className="pb-2 text-2xl font-semibold text-blue-500">
               About this Course

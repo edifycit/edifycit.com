@@ -6,15 +6,22 @@ import {
   HomeCount,
   Reviews,
 } from "@/components/Home/Export";
+
+
 import axios from "axios";
 import Image from "next/image";
 import openGraphImage from "@/components/shared-metadata";
+
+
+
 const coursesfetch = async () => {
   const { data } = await axios.get(
-    `https://admin.edifycit.com/api/courses?limit=6`
+    `https://admin.edifycit.com/api/courses?limit=6&isFeatured=true`
   );
   return data.message.data;
 };
+
+
 
 export const metadata = {
   title: "Edify College of IT | No. 1 Leading Institute In Pakistan",
