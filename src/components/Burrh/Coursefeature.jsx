@@ -37,7 +37,7 @@ const Coursefeature = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -83,7 +83,7 @@ const Coursefeature = () => {
 
   return (
     <HoverCard backgroundColor="#735a3620" direction="flex-col" left="-10%">
-      <div className="px-8 backdrop-blur-3xl py-6 bg-[]">
+      <div className="px-8 backdrop-blur-3xl py-6 ">
         <Slider {...settings} className="px-6">
           {courseCategories.map((v, i) => {
             return (

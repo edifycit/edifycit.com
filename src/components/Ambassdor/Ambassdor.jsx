@@ -54,7 +54,7 @@ try {
         alt=""
       />
 
-      <form onSubmit={submitHandler} className="w-full bg-[rgba(38,38,38,0.5)] p-4 rounded-md shadow-lg relative">
+      <form onSubmit={submitHandler} className="w-full bg-[rgba(38,38,38,0.5)] pb-6 rounded-md shadow-lg relative">
         {/* Personal */}
         <Image
           width={700}
@@ -64,10 +64,10 @@ try {
           alt=""
         />
         <fieldset className="mb-4">
-          <legend className="w-full px-4 py-4 bg-[#00000090] text-xl  text-gray-400 border border-gray-600 font-medium rounded-md outline-none group">
+          <legend className="w-full p-4 text-white bg-[#3B82F6] bg-opacity-40  font-medium outline-none group">
             Personal
           </legend>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6 px-4">
             <div className="relative">
               <input
                 className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
@@ -144,7 +144,7 @@ try {
               ></i>
             </div>
           </div>
-          <div className="flex items-center gap-2 rounded-xl  p-2">
+          <div className="flex items-center gap-2 rounded-xl  p-2 px-4">
             <label className="px-2 text-gray-400">Gender :</label>
             <div className="flex gap-4">
               <div>
@@ -202,13 +202,13 @@ try {
         </fieldset>
         {/* Qualification */}
         <fieldset className="mb-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4 px-4">
             <div className="relative">
               <input
                 className="bg-transparent shadow-2xl px-2 py-2 outline-none w-full border-b focus:border-blue-400 duration-75 "
                 type="text"
                 name="refrance"
-                placeholder="Refrance"
+                placeholder="Reference"
                 onChange={inputhandler}
 
               />
@@ -217,7 +217,7 @@ try {
           </div>
         </fieldset>
 
-        <div className="flex justify-end gap-6">
+        <div className="flex justify-end gap-6 px-4">
           <button className="bg-gray-950 text-gray-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group whitespace-nowrap">
             <input type="submit" />
             <span className="bg-blue-400 shadow-blue-600 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>

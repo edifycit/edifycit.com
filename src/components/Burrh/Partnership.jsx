@@ -5,7 +5,7 @@ const Partnership = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -58,7 +58,7 @@ const Partnership = () => {
           <div>
             <h2 className="text-xl font-semibold opacity-50">Partnerships</h2>
           </div>
-          <Slider {...settings} className="w-[100%] max-w-5xl">
+          <Slider {...settings} className="w-[100%]">
             {noOfPartners.map((v, i) => {
               return (
                 <div key={i}>

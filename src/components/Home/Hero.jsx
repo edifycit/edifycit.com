@@ -118,7 +118,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className="max-w-[100%] overflow-hidden"
+        className="w-[100%] overflow-hidden"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateX(-200px)",

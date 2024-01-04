@@ -74,7 +74,7 @@ const Fcourse = () => {
       </div>
 
       <div
-        className="md:max-w-6xl ml-4"
+        className="ml-4"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-100px)",
