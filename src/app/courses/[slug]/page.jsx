@@ -2,45 +2,32 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
-
-
 const singleCourse = async (slug) => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses/single/${slug}`
   );
 
-
-
   return data.message;
 };
-export async function generateMetadata({ params}) {
-  const metaslug =  await singleCourse(params.slug)
-  
-   
-    return {
+export async function generateMetadata({ params }) {
+  const metaslug = await singleCourse(params.slug);
+
+  return {
+    title: metaslug.title,
+    description: metaslug.metaDesc,
+    openGraph: {
       title: metaslug.title,
-      description:metaslug.metaDesc,
-      openGraph: {
-        title: metaslug.title,
-        description:metaslug.metaDesc,
-        images: [metaslug.featuredImage.url],
-      },
-    }
-  }
+      description: metaslug.metaDesc,
+      images: [metaslug.featuredImage.url],
+    },
+  };
+}
 const fetchRelatedCourses = async () => {
   const { data } = await axios.get(
     `https://admin.edifycit.com/api/courses?limit=6`
   );
   return data.message.data;
 };
-
-
-
-
-
-
 
 const page = async ({ params }) => {
   const relatedCourses = await fetchRelatedCourses();
@@ -67,7 +54,7 @@ const page = async ({ params }) => {
             </p>
             <div className="flex gap-4 justify-center">
               <Link
-                href={"/apply"}
+                href={`/apply?c=${course?._id}`}
                 className="inline-block px-4 py-2 rounded-md shadow-md border border-gray-800 items-center bg-slate-800"
               >
                 Enroll Now
@@ -119,7 +106,10 @@ const page = async ({ params }) => {
                     <ul className={`p-2 max-w-full`}>
                       {v?.topics?.map((topics, topicIndex) => {
                         return (
-                          <li className="overflow-hidden whitespace-nowrap mb-1 overflow-ellipsis max-w-xs" key={topicIndex}>
+                          <li
+                            className="overflow-hidden whitespace-nowrap mb-1 overflow-ellipsis max-w-xs"
+                            key={topicIndex}
+                          >
                             {topics}
                           </li>
                         );
@@ -160,7 +150,8 @@ const page = async ({ params }) => {
                             className="block text-sm text-gray-400 group-hover:text-blue-400 transition duration-200"
                             target="_blank"
                           >
-                            Read Article <i className="bx bx-right-arrow-alt"></i>
+                            Read Article{" "}
+                            <i className="bx bx-right-arrow-alt"></i>
                           </button>
                         </div>
                       </div>
@@ -172,8 +163,6 @@ const page = async ({ params }) => {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 };

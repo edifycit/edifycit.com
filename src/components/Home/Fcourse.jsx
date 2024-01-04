@@ -48,7 +48,6 @@ const Fcourse = () => {
           </div>
         </div>
         {/* side line */}
-
         <div
           className="pt-3"
           ref={ref}
