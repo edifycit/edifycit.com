@@ -195,8 +195,8 @@ const Team = () => {
     {
       id: "28",
       designation: "Graphic Designer",
-      employe: "Aleesha Teahreem",
-      image: "/images/team/aleeshasb.webp",
+      employe: "Aleesha Tehreem",
+      image: "/images/team/Aleeshasb.webp",
       category: "PD",
     },
   ];
