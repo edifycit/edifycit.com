@@ -71,7 +71,7 @@ const page = async () => {
       <Image
         width={700}
         height={700}
-        className="absolute top-0 right-0 opacity-30 w-auto"
+        className="absolute top-0 right-0 opacity-10 lg:opacity-30 w-auto"
         src="/images/pngwing.com.png"
         alt="background"
       />

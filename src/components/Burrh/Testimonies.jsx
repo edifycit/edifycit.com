@@ -12,7 +12,7 @@ const Testimonies = () => {
               What people <br />
               are saying.
             </h3>
-            <div className="text-center mb-10">
+            <div className="text-center mb-4">
               <span className="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
               <span className="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
               <span className="inline-block w-40 h-1 rounded-full bg-indigo-500"></span>
@@ -20,7 +20,7 @@ const Testimonies = () => {
               <span className="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
             </div>
           </div>
-          <div className="elfsight-app-8894fdd5-af92-4a01-8220-a10bd723a879 max-w-[1400px] mt-28 "></div>
+          <div className="elfsight-app-8894fdd5-af92-4a01-8220-a10bd723a879 max-w-[1400px] mt-10"></div>
         </div>
       </div>
     </section>

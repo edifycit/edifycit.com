@@ -14,7 +14,7 @@ const HomeCount = () => {
     <>
       <div className="flex max-md:gap-4">
         <div
-          className="ml-5 mr-8 flex flex-col md:flex-row items-center"
+          className="ml-5 mr-5 md:mr-10 flex flex-col md:flex-row items-center"
           ref={ref}
         >
           <div className="h-full">
