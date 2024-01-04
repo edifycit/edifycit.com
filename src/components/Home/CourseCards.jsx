@@ -10,8 +10,8 @@ const CourseCard = ({ courses }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    // autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
       {
@@ -65,6 +65,7 @@ const CourseCard = ({ courses }) => {
       <Slider {...settings}>
         {courses.map((v, i) => {
           return (
+          
             <div key={i}>
               <Link
                 href={`/courses/${v.slug}`}

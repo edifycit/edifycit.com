@@ -87,7 +87,7 @@ const Hero = () => {
             <h1 className=" py-4 text-4xl lg:text-6xl font-semibold text-white ">
               Master Your Skills.
             </h1>
-            <p className="relative z-1 max-w-[570px] leading-[30px] md:leading-[36px] text-[#7d8590] lg:leading-[44px] mb-5 md:mb-20 text-lg">
+            <p className="relative z-1 max-w-[570px]  text-[#7d8590] leading-[30px] mb-5 md:mb-20 text-lg">
             Embark on your professional journey with industry-leading experts by enrolling in our distinguished IT programs.
             </p>
           </div>

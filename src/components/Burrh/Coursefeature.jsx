@@ -2,8 +2,10 @@
 import HoverCard from "@/components/Burrh/HoverCard";
 import Slider from "react-slick";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Coursefeature = () => {
+  const router = useRouter();
   const courseCategories = [
     {
       cate: "Digital Marketing",
@@ -23,7 +25,7 @@ const Coursefeature = () => {
     },
     {
       cate: "Data Science",
-      
+
       noOfCourses: 1,
     },
     {
@@ -85,7 +87,11 @@ const Coursefeature = () => {
         <Slider {...settings} className="px-6">
           {courseCategories.map((v, i) => {
             return (
-              <div key={i} className="grid grid-cols-3 px-2">
+              <div
+                key={i}
+                className="grid grid-cols-3 px-2"
+                onClick={() => router.push(`courses?keyword=${v.cate}`)}
+              >
                 <div className="bg-[#1212122f] backdrop-blur-xl overflow-hidden rounded-lg flex flex-col items-center p-4 relative group">
                   <Image
                     width={700}
