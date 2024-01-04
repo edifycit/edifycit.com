@@ -25,23 +25,23 @@ const NavBar = () => {
     <>
       <div className="bg-[#0000006a] drop-shadow-lg z-50 py-3 sticky top-0 backdrop-blur-3xl mb-2">
         <nav className="flex items-center justify-between max-w-[1400px] m-auto px-4 lg:px-4 2xl:px-0">
-          <div className="lg:w-[10rem] w-[50px] lg:h-[2rem]">
+          <div>
             <Link href="/">
               <picture>
                 <Image
                   priority
-                  className="w-full h-full object-contain hidden lg:block"
+                  className="w-[150px] h-auto object-contain hidden lg:block"
                   width={700}
                   height={200}
-                  src="/images/logo1.webp"
+                  src="/images/newlogo.png"
                   alt="Edify College Of IT Logo"
                 />
                 <Image
                   priority
-                  className="w-full h-full lg:hidden"
+                  className="w-[41px] h-auto lg:hidden"
                   width={700}
-                  height={120}
-                  src="/images/bluelogo.png"
+                  height={200}
+                  src="/images/enew.png"
                   alt="Edify College Of IT Logo"
                 />
               </picture>

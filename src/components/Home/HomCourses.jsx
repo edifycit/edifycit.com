@@ -17,7 +17,7 @@ const HomeCourses = ({courses}) => {
         {/* side line */}
 
         <div
-          className="ml-5 mr-10 flex flex-col md:flex-row items-center"
+          className="ml-5 mr-5 md:mr-10 flex flex-col md:flex-row items-center"
           ref={ref}
         >
           <div className="h-full">

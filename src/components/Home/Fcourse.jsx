@@ -12,7 +12,7 @@ const Fcourse = () => {
     <>
       <div className="flex max-md:gap-4 relative">
         {/* side line */}
-        <div className="ml-2 mr-10 flex flex-col items-center" ref={ref}>
+        <div className="ml-2 mr-5 md:mr-10 flex flex-col items-center" ref={ref}>
           <div>
             <div
               style={{

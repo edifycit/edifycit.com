@@ -13,7 +13,7 @@ const Membership = () => {
       <div className="relative">
         <div className="flex max-md:gap-4">
           {/* side line */}
-          <div className="ml-2 mr-10 flex flex-col items-center" ref={ref}>
+          <div className="ml-2 mr-5 md:mr-10 flex flex-col items-center" ref={ref}>
             <div
               style={{
                 opacity: isInView ? "1" : "0",

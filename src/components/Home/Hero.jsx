@@ -22,7 +22,7 @@ const Hero = () => {
     <>
       <div className="flex max-md:gap-4">
         {/* side line animation */}
-        <div className=" ml-2 mr-10 flex flex-col items-center pt-2" ref={ref}>
+        <div className=" ml-2 mr-5 md:mr-10 flex flex-col items-center pt-2" ref={ref}>
           <div className="border-2 rounded-full h-5 mb-2 aspect-square border-gray-500 "></div>
           <div className="h-full">
             <div
@@ -72,7 +72,8 @@ const Hero = () => {
             />
           </div>
         </div>
-        {/* side line animation */}
+
+
         <div
           className="md:mb-20 pt-6 md:w-full"
           ref={ref}
@@ -86,7 +87,7 @@ const Hero = () => {
             <h1 className=" py-4 text-4xl lg:text-6xl font-semibold text-white ">
               Master Your Skills.
             </h1>
-            <p className="relative z-1 text-sm md:text-lg  lg:text-xl leading-[30px] md:leading-[36px] md:text-white lg:leading-[44px] mb-5 md:mb-20 md:10/12 sm:text-white sm:text-lg lg:w-9/12 text-[#7d8590]">
+            <p className="relative z-1 max-w-[570px] leading-[30px] md:leading-[36px] text-[#7d8590] lg:leading-[44px] mb-5 md:mb-20 text-lg">
             Embark on your professional journey with industry-leading experts by enrolling in our distinguished IT programs.
             </p>
           </div>
