@@ -106,7 +106,7 @@ const Team = () => {
     {
       id: "12",
       designation: "Sr. Graphic Designer",
-      employe: "Syed Ahmad Husnain",
+      employe: "Syed Ahmad Hasnain",
       image: "/images/team/ahmed.webp",
       className: "edify-team-head-background",
       category: "GP",
@@ -114,7 +114,7 @@ const Team = () => {
 
     {
       id: "13",
-      designation: "Graphics Designer",
+      designation: "Graphic Designer",
       employe: "Armaz Ali",
       image: "/images/team/armaz.webp",
       category: "GP",
@@ -160,14 +160,14 @@ const Team = () => {
     {
       id: "21",
       designation: "Content Writer",
-      employe: "Akifa waqar",
+      employe: "Akifa Waqar",
       image: "/images/team/akifa.webp",
       category: "MK",
     },
     {
       id: "24",
       designation: "Graphic Designer",
-      employe: "M Ata Ul Hussanian",
+      employe: "M Ata Ul Hussnain",
       image: "/images/team/husnain.webp",
       category: "GP",
     },
@@ -196,7 +196,7 @@ const Team = () => {
       id: "28",
       designation: "Graphic Designer",
       employe: "Aleesha Tehreem",
-      image: "/images/team/AleeshaSb.webp",
+      image: "/images/team/aleeshasb.webp",
       category: "PD",
     },
   ];
@@ -215,27 +215,27 @@ const Team = () => {
 
     {
       id: "3",
-      buttonText: "Graphic Designing",
+      buttonText: "Graphic Designers",
       value: "GP",
     },
     {
       id: "4",
-      buttonText: "Development",
+      buttonText: "Developers",
       value: "PD",
     },
     {
       id: "5",
-      buttonText: "Digital Marketing",
+      buttonText: "Digital Marketer",
       value: "MK",
     },
     {
       id: "6",
-      buttonText: "Amazon",
+      buttonText: "E-Commerce Experts",
       value: "EC",
     },
     {
       id: "7",
-      buttonText: "Management",
+      buttonText: "Management Officers",
       value: "BDO",
     },
   ];
