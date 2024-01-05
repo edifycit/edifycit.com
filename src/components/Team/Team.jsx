@@ -144,7 +144,7 @@ const Team = () => {
     },
     {
       id: "19",
-      designation: "Admistrator",
+      designation: "Management Officer",
       employe: "Aleena Safdar",
       image: "/images/team/aleena.webp",
       category: "BDO",
