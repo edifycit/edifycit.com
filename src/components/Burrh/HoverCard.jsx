@@ -58,7 +58,7 @@ const HoverCard = ({ children, backgroundColor, direction, left }) => {
 
   return (
     <animated.div
-      className="  overflow-hidden rounded-xl border-[1px] border-white/10"
+      className="  overflow-hidden rounded-xl border-[1px] border-white/10 "
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: springProps.xys.to(trans) }}

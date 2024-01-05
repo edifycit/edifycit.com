@@ -19,6 +19,32 @@ const Footer = () => {
       h: "https://www.instagram.com/edifycitofficial/",
     },
   ];
+  const courselinks = [
+    {
+      name: "SEO",
+      link: "/courses/search-engine-optimization",
+    },
+    {
+      name: "Amazon",
+      link: "/courses/amazon-fba",
+    },
+    {
+      name: "Spoken English",
+      link: "/courses/spoken-english",
+    },
+    {
+      name: "Digital Marketing",
+      link: "/courses/digital-marketing",
+    },
+    {
+      name: "Web Development",
+      link: "/courses/full-stack-web-development",
+    },
+    {
+      name: "Android Development",
+      link: "/courses/app-development-with-kotlin",
+    },
+  ];
   const d = new Date();
   let year = d.getFullYear();
 
@@ -52,7 +78,8 @@ const Footer = () => {
                 Let&apos;s keep in touch!
               </h4>
               <h5 className="text-lg mt-0 mb-2 text-gray-300 text-blueGray-600">
-                Find us on any of these platforms, we respond in 1-2 business days.
+                Find us on any of these platforms, we respond within 1-2 business
+                days.
               </h5>
               <div className="mt-6 lg:mb-0 mb-6 flex gap-4">
                 {social.map((v, i) => (
@@ -68,6 +95,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
             <div className="col-span-4 lg:col-span-1">
               <span className="block  uppercase text-blueGray-500 text-xl font-semibold mb-2">
                 Useful Links
@@ -125,59 +153,22 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+
             <div className="col-span-4 lg:col-span-1">
               <span className="block uppercase text-blueGray-500 text-xl font-semibold mb-2">
                 Our Courses
               </span>
               <ul className="list-unstyled">
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    SEO
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    Amazon
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    Spoken English
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    Digital Marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    Web Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block pb-2 text-gray-300 hover:text-white"
-                    href="/courses"
-                  >
-                    Android Development
-                  </Link>
-                </li>
+                {courselinks?.map((v, i) => (
+                  <li key={i}>
+                    <Link
+                      className="block pb-2 text-gray-300 hover:text-white"
+                      href={v.link}
+                    >
+                      {v.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -185,8 +176,7 @@ const Footer = () => {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-300 py-1">
-                {/* © <span id="get-current-year">2022 to {year}</span> */}©{" "}
-                {year} Edify College of IT. All Rights Reserved.
+                © {year} Edify College of IT. All Rights Reserved.
               </div>
             </div>
           </div>

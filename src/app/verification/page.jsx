@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import openGraphImage from "@/components/shared-metadata";
 
 export const metadata = {
@@ -13,12 +14,13 @@ export const metadata = {
   },
 };
 const page = () => {
- 
   return (
     <>
       <div className="p-6 flex flex-col items-center justify-center mt-16">
-        <img
-          src="https://edifycit.com/images/batch.png"
+        <Image
+          width={112}
+          height={100}
+          src="/images/batch.png"
           alt="Image Here"
           className="w-[112px] mb-4"
         />
